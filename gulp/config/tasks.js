@@ -6,6 +6,5 @@ module.exports =[
     "./gulp/tasks/watch",
     "./gulp/tasks/scripts",
     "./gulp/tasks/img",
-    "./gulp/tasks/video",
     "./gulp/tasks/svg",
 ]
