@@ -1,0 +1,125 @@
+.russia .conteiner_head,
+.world .conteiner_head{
+    margin-top 9.111111em
+}
+.russia .conteiner,
+.world .conteiner{
+    width 100vw
+}
+.russia img{
+    position absolute
+    z-index -1
+    right -400px
+    top 100px
+}
+.world img{
+    position absolute
+    z-index -1
+    right -300px
+    top 100px
+}
+.greeCircle{
+    display block
+    position relative
+    width 14px
+    height 14px
+    border 2px solid #1B8508
+    border-radius 50%
+}
+.greeCircle::before{
+    content ''
+    position absolute
+    display block
+    width 6px
+    height 6px
+    background #66B700
+    border-radius 50%
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+}
+.vertHr{
+    display block
+    background #DCDCDC
+    width 1px
+    height 16px
+}
+.level{
+    width 4%
+    display flex
+    justify-content center
+    font-weight bold
+}
+.left{
+    transform rotate(-90deg) translateY(3px)
+    transform-origin center
+}
+.tableItem{
+    width 17%
+    color #1B8508
+}
+.world .tableItem{
+    width 33%
+}
+.russia_table{
+    width 925px
+}
+.world_table{
+    width 544px
+}
+.russia_table,
+.world_table{
+    text-align center
+    margin-top 136px
+}
+.russia_table__head,
+.world_table__head{
+    display flex
+    justify-content space-between
+    align-items center
+    white-space nowrap
+    background rgba(252, 252, 252, 0.5)
+    border-radius 18px
+    padding 21px 45px 21px 30px
+    border 1px dashed #DCDCDC
+    margin-bottom 24px
+}
+.russia_table__head .tableItem,
+.world_table__head .tableItem{
+    font-weight bold
+    color inherit
+}
+
+.russia_table__body,
+.world_table__body{
+    display flex
+    flex-direction column
+    background #FFFFFF
+    border 1px solid #F5F5F5
+    box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
+    border-radius 18px
+    padding 0 45px 0 30px
+}
+.russia_table__row,
+.world_table__row{
+    display flex
+    justify-content space-between
+    align-items center
+    margin 29px 0
+}
+.russia_visua,
+.world_visua{
+    width 100%
+    overflow-x scroll
+}
+@media all and (max-width 1024px) {
+    .russia .conteiner{
+        // overflow-x scroll
+    }
+}
+@media all and (max-width 920px) {
+    .russia_table,
+    .world_table{
+        margin-top 400px
+    }    
+}

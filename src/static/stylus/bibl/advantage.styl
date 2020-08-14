@@ -1,0 +1,168 @@
+.advantage{
+    display flex
+    flex-direction column
+    align-items center
+}
+.top_conteiner{
+    background #FCFCFC
+    width 100%
+    margin-top 92px
+    display flex
+    flex-direction column
+    align-items center
+    width 100vw
+}
+.advantage .conteiner_head{
+    max-width 1174px
+}
+.advantage_top{
+    display flex
+    justify-content space-between
+    margin-top 84px
+    margin-bottom 160px
+    width 100%
+    max-width 1200px
+}
+.advantage_item>h2{
+    position relative
+    z-index 1
+}
+.advantage_item>h2::before{
+    content ''
+    display block
+    position absolute
+    width 104px
+    height 104px
+    border-radius 50%
+    background #fff
+    z-index -1
+    border 1px dashed #DCDCDC
+    left -50%
+    bottom 50%
+    transform translate(50%, 50%)
+}
+.advantage_item>h2::after{
+    content ''
+    display block
+    position absolute
+    width 129px
+    height 2px
+    background linear-gradient(90deg, #66B700 0%, rgba(102, 183, 0, 0) 100%)
+}
+.advantage_item>p{
+    position relative
+    z-index 2
+    margin-top 44px
+}
+.slash{
+    width 1px
+    height 86px
+    display block
+    background #DCDCDC
+    transform: rotate(30deg);
+    margin-left -10%
+}
+//bottom
+.bottom_conteiner{
+    position relative
+    width 100vw
+    background url('../img/Travel.png')
+    background-repeat no-repeat
+    background-position center top
+}
+.bottom_conteiner>img{
+    margin-top -400px
+    width 100%
+    opacity 0
+}
+.phone_wrapp{
+    max-width 1200px
+    margin 0 auto
+    display flex
+    justify-content flex-end
+}
+.phone{
+    position relative
+    max-width 480px
+    background #fff
+    margin-top 104px
+    border-radius 36px
+    padding 37px 16px 100px
+    box-shadow 0px 15px 40px rgba(0, 0, 0, 0.1)
+}
+.phone::after{
+    content ''
+    display block
+    position absolute
+    width 110px
+    height 4px
+    border-radius 4px
+    background #66B700
+    left 50%
+    bottom 20px
+    transform translateX(-50%)
+}
+.phone_top{
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    padding 0 18px
+    position relative
+    margin-bottom 30px
+}
+.phone_top .hr{
+    width 40px
+    height 4px
+    background #66B700
+    border-radius 4px
+    position absolute
+    left 50%
+    bottom 7px
+    transform translateX(-50%)
+}
+.phone_bar{
+    display flex
+    justify-content space-between
+    width 100%
+    margin-bottom 31px
+}
+.phone_content__items{
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    padding 20px
+    box-shadow 0px 0px 12px rgba(0, 0, 0, 0.1)
+    border-radius 18px
+}
+.phone_content__items:first-child{
+    margin-bottom 22px
+}
+.phone_content__items>p{
+    margin-top 10px
+}
+//meida
+@media all and (max-width 1280px) {
+    .top_conteiner,
+    .bottom_conteiner{
+        padding 0 47px
+    }
+    .phone{
+        max-width 400px
+    }
+    .phone_bar>img{
+        width 48px
+        object-fit: cover;
+    }
+}
+@media all and (max-width 920px) {
+    .advantage_item>h2::before{
+        left -55%
+    }
+    .phone{
+        max-width 330px
+        padding 23px 12px 70px
+    }
+    .phone_bar>img{
+        width 36px
+    }
+}

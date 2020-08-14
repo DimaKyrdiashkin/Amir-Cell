@@ -8,6 +8,7 @@
 h1{
     font-size 5.333333em
     line-height 120%
+    position relative
 }
 h2{
     font-size 3.333333em
@@ -33,6 +34,17 @@ p{
     font-size 0.777777em
     line-height 140%
 }
+.smalP{
+    font-size 0.666666em
+    line-height 150%
+    color #9A9A9A
+}
+.gray{
+    color #DCDCDC
+}
+.green{
+    color #66B700
+}
 ul, li{
     list-style none
 }
@@ -45,4 +57,77 @@ body{
     font-size 18px
     color #5C5C5C
     user-select none
+    overflow-x hidden
+}
+section{
+    display flex
+    justify-content center
+}
+.wrapper{
+    display flex
+    flex-direction column
+    align-items center
+    overflow hidden
+}
+.conteiner{
+    max-width 1200px
+    width 100vw
+    position relative
+}
+.conteiner_head{
+    width 100%
+    display flex
+    align-items center
+    margin-left 26px
+}
+.conteiner_head:first-child{
+    margin-top 6.222222em
+}
+.dots{
+    display block
+    width 12px
+    height 12px
+    background #76B66B
+    border-radius 50%
+    margin-left 50px
+    position relative
+}
+.dots::before{
+    content ''
+    display block
+    width 12px
+    height 12px
+    background #1B8508
+    border-radius 50%
+    margin-left -18px
+}
+.dots::after{
+    position absolute
+    content ''
+    display inline-block
+    top 0
+    width 12px
+    height 12px
+    background #D1E7CE
+    border-radius 50%
+    margin-left 18px
+}
+@media all and (max-width 1280px) {
+    body{
+        font-size 16px
+    }
+    .conteiner{
+        padding 0 47px
+    }
+}
+@media all and (max-width 920px) {
+    body{
+        font-size 14px
+    }
+    .subP{
+        font-size 1em
+    }
+    .conteiner{
+        padding 0 35px
+    }
 }

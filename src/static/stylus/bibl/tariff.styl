@@ -1,0 +1,154 @@
+.tariffs .conteiner{
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+}
+.card{
+    margin-top 50px
+    max-width 366px
+    height fit-content
+    display flex
+    flex-direction column
+    box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
+    border-radius 18px
+    overflow hidden
+    position relative
+    border 1px solid #F5F5F5
+}
+.card_head{
+    display flex
+    justify-content space-between
+    align-items center
+    position relative
+    border 1px solid #F3F3F3
+    overflow hidden
+    height 120px
+    margin-bottom 24px
+}
+.card_head h3{
+    margin-left 24px
+}
+.card_head h3::after{
+    content ''
+    display block
+    background #A3D466
+    width 32px
+    height 2px
+    border-radius 2px
+}
+.card_head img{
+    position absolute
+    right 0
+    top 0
+}
+.card_content{
+    padding 0 24px
+    display flex
+    justify-content space-between
+}
+.card_column{
+    text-align center
+    margin-bottom 30px
+    display flex
+    flex-direction column
+}
+.card_column{
+    width 92px
+}
+.card_column__top{
+    margin-bottom 12px
+    background #FCFCFC
+    border 1px solid #F5F5F5
+    border-radius 5px
+    padding 6px 0
+    text-transform uppercase
+    font-weight bold
+    align-self center
+    width 100%
+}
+.card_column__bottom{
+    background #fff
+    border 1px dashed #F5F5F5
+    box-shadow 0px 0px 12px rgba(0, 0, 0, 0.03)
+    border-radius 3px
+    padding 28px 0
+    white-space nowrap
+    color #1B8508
+    align-self center
+    width 100%
+}
+.card_column__bottom:last-child{
+    margin-right 0
+}
+img.card_column__bottom{
+    padding 28px
+    max-width 92px
+}
+.card_bottom{
+    padding 0 24px 70px
+    display flex
+    flex-direction column
+    position relative
+}
+.price{
+    position relative
+    margin-bottom 24px
+}
+.price::after{
+    content ''
+    display block
+    position absolute
+    width 100%
+    height 2px
+    background #85C533
+}
+.card_button{
+    margin-top 23px
+    cursor pointer
+    position absolute
+    bottom 20px
+    left 50%
+    transform translateX(-50%)
+    transition .4s
+}
+.card_button.open{
+    transform translateX(-50%) rotate(180deg)
+    transition .4s
+}
+.empty_card{
+    display flex
+    align-items center
+    justify-content center
+    width 366px
+}
+.empty_card img{
+    padding 46px
+    border-radius 50%
+    border 1px dashed #DCDCDC
+}
+@media all and (max-width 1280px) {
+    .tariffs .conteiner{
+        justify-content center
+    }
+    .card{
+        margin 50px 20px 0
+        max-width 327px
+    }
+    .empty_card{
+        margin 50px 20px 0
+        width 327px
+    }
+    .card_column__top,
+    .card_column__bottom{
+        max-width 81px
+    }
+}
+@media all and (max-width 920px) {
+    .card,
+    .empty_card{
+        margin 50px 10px 0
+    }
+    .card_button{
+        cursor default
+    }
+}

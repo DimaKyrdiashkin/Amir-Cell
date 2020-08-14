@@ -1,0 +1,76 @@
+.promo{
+    background #FCFCFC
+    min-height 100vh
+    width 100%
+}
+.promo_main{
+    display flex
+    justify-content space-between
+    height 70%
+    align-items center
+    position relative
+}
+.promo_main__left{
+    margin-top 50px
+    margin-left 75px
+    z-index 1
+}
+.promo_main__left p{
+    max-width 360px
+}
+.promo_main__right{
+    position absolute
+    right -100px
+    height 100%
+}
+.promo_main__right img{
+    object-fit cover
+    height 100%
+    min-height 400px
+}
+.promo_box{
+    margin-top 70px
+    display flex
+    align-items center
+    position relative
+}
+.promo_link{
+    text-transform uppercase
+    letter-spacing 0.33em
+    color #1B8508
+    padding 20px 60px
+    border 1px dashed #66B700
+    border-radius 8px
+    transition .4s
+}
+.promo_link:hover{
+    background #E9F4DB
+    transition .4s
+    box-shadow 0px 5px 20px rgba(0, 0, 0, 0.1)
+}
+.promo .arrows{
+    position absolute
+    top 50%
+    right 0px
+    transform translate(0, -50%)
+}
+h1::before{
+    content ''
+    display block
+    position absolute
+    top -28px
+    width 63px
+    height 3px
+    border-radius 2px
+    background #66B700
+}
+@media all and (max-width 1280px) {
+    .promo_main__right{
+        right -150px
+    } 
+}
+@media all and (max-width 920px) {
+    .promo_main__right{
+        right -300px
+    }
+}

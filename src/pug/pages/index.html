@@ -5,19 +5,21 @@
     <title>Title</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="wrapper">
         <section class="promo">
             <div class="conteiner">
                 <header>
-                    <img src="static/svg/LogoGorizontal.svg" alt="logo" class="logo">
+                    <img src="static/svg/LogoGorizontal.svg" alt="logo" class="logoG">
+                    <img src="static/svg/LogoVertical.svg" alt="logo" class="logoV">
                     <ul class="menu">
-                        <li><a href="#">Тарифы</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Россия</a></li>
-                        <li><a href="#">Весь мир</a></li>
-                        <li><a href="#">Как заказать?</a></li>
+                        <li><a href="#tariffs" class="subP">Тарифы</a></li>
+                        <li><a href="#advantage" class="subP">Преимущества</a></li>
+                        <li><a href="#russia" class="subP">Россия</a></li>
+                        <li><a href="#world" class="subP">Весь мир</a></li>
+                        <li><a href="#howto" class="subP">Как заказать?</a></li>
                     </ul>
                 </header>
                 <div class="promo_main">
@@ -26,7 +28,7 @@
                         <p>В быстроизменяющемся мире мы стремимся к свободе и легкости.</p>
                         <div class="promo_box">
                             <a href="#" class="promo_link">Заказать eSim</a>
-                            <span class="arrows"></span>
+                            <img src="static/svg/PromoArrows.svg" alt="arrows" class="arrows">
                         </div>
                     </div>
                     <div class="promo_main__right">
@@ -35,7 +37,7 @@
                 </div>
             </div>
         </section>
-        <section class="tariffs">
+        <section class="tariffs" id="tariffs">
             <div class="conteiner">
                 <div class="conteiner_head">
                     <h4>Тарифы</h4>
@@ -43,252 +45,386 @@
                 </div>
                 <div class="card">
                     <div class="card_head">
-                        <h3></h3>
-                        <img src="" alt="">
+                        <h3>Star</h3>
+                        <img src="static/svg/TarifStar.svg" alt="TarifStar">
                     </div>
                     <div class="card_content">
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">lte</p>
+                            <p class="card_column__bottom">25 Gb</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">gsm</p>
+                            <p class="card_column__bottom">1000</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">sms</p>
+                            <p class="card_column__bottom">500</p>
+                        </div>
                     </div>
                     <div class="card_bottom">
-                        <h5></h5>
-                        <p class="subP"></p>
-                        <img src="" alt="" class="card_button">
+                        <h5 class="price">300 USDT</h5>
+                        <p class="subP cardT">Почувствуй себя настоящей звездой с тарифом Star. Всего за 300 USDT в год вы получите комфортную мобильную связь по России с 1000 GSM звонков, 500 SMS и 25Гб скоростного интернета, а так же безлимитным интернетом LTE.
+                            При выезде зарубеж есть возможность подключить пакеты GSM звонков и мегабайты интернета по самой низкой цене для страны пребывания.</p>
                     </div>
+                    <img src="static/svg/Arrow.svg" alt="" class="card_button">
                 </div>
                 <div class="card">
                     <div class="card_head">
-                        <h3></h3>
-                        <img src="" alt="">
+                        <h3>Moon</h3>
+                        <img src="static/svg/TarifMoon.svg" alt="TarifMoon">
                     </div>
                     <div class="card_content">
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">lte</p>
+                            <p class="card_column__bottom">25 Gb</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">gsm</p>
+                            <p class="card_column__bottom">1000</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">sms</p>
+                            <p class="card_column__bottom">500</p>
+                        </div>
                     </div>
                     <div class="card_bottom">
-                        <h5></h5>
-                        <p class="subP"></p>
-                        <img src="" alt="" class="card_button">
+                        <h5 class="price">500 USDT</h5>
+                        <p class="subP cardT">Тариф Moon является продолжением тарифа Star, но с расширенными возможностями роуминга. Он включает в себя 20 минут входящих GSM звонков из домашнего региона, а так же 400 Mb интернета. И это все доступно ежемесячно. И конечно всегда доступны для пополнения пакеты GSM звонков и интернета по самым низким ценам региона использования.</p>
                     </div>
+                    <img src="static/svg/Arrow.svg" alt="" class="card_button">
                 </div>
                 <div class="card">
                     <div class="card_head">
-                        <h3></h3>
-                        <img src="" alt="">
+                        <h3>Galaxy</h3>
+                        <img src="static/svg/TarifGalaxy.svg" alt="TarifGalaxy">
                     </div>
                     <div class="card_content">
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">lte</p>
+                            <p class="card_column__bottom">35 Gb</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">gsm</p>
+                            <p class="card_column__bottom">2000</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">sms</p>
+                            <p class="card_column__bottom">1000</p>
+                        </div>
                     </div>
                     <div class="card_bottom">
-                        <h5></h5>
-                        <p class="subP"></p>
-                        <img src="" alt="" class="card_button">
+                        <h5 class="price">800 USDT</h5>
+                        <p class="subP cardT">Этот тариф подойдет для активных людей пользующихся мобильной связью дома, на работе, в транспорте так и в поездках за рубеж. Скоростной интернет 35Гб + безлимитный интернет LTE, 1000 SMS и 2000 GSM звонков по России. При роуминге в тариф входит 1 Gb интернета и 30 входящих звонков из домашнего региона. И конечно доступны пакеты минут и интернета по самой низкой цене региона использования.</p>
                     </div>
+                    <img src="static/svg/Arrow.svg" alt="" class="card_button">
                 </div>
                 <div class="card">
                     <div class="card_head">
-                        <h3></h3>
-                        <img src="" alt="">
+                        <h3>Universe</h3>
+                        <img src="static/svg/TarifUniverse.svg" alt="TarifUniverse">
                     </div>
                     <div class="card_content">
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">lte</p>
+                            <p class="card_column__bottom">50 Gb</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">gsm</p>
+                            <p class="card_column__bottom">4000</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">sms</p>
+                            <p class="card_column__bottom">500</p>
+                        </div>
                     </div>
                     <div class="card_bottom">
-                        <h5></h5>
-                        <p class="subP"></p>
-                        <img src="" alt="" class="card_button">
+                        <h5 class="price">1300 USDT</h5>
+                        <p class="subP cardT">Этот тариф подойдет для активных людей пользующихся мобильной связью дома, на работе, в транспорте так и в поездках за рубеж. Скоростной интернет 35Гб + безлимитный интернет LTE, 1000 SMS и 2000 GSM звонков по России. При роуминге в тариф входит 1 Gb интернета и 30 входящих звонков из домашнего региона. И конечно доступны пакеты минут и интернета по самой низкой цене региона использования.</p>
                     </div>
+                    <img src="static/svg/Arrow.svg" alt="" class="card_button">
                 </div>
                 <div class="card">
                     <div class="card_head">
-                        <h3></h3>
-                        <img src="" alt="">
+                        <h3>Travel</h3>
+                        <img src="static/svg/TarifTravel.svg" alt="TarifTravel">
                     </div>
                     <div class="card_content">
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
-                        <div class="card_column"></div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">lte</p>
+                            <img src="static/svg/Infinit.svg" alt="infinit" class="card_column__bottom">
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">gsm</p>
+                            <p class="card_column__bottom">/</p>
+                        </div>
+                        <div class="card_column">
+                            <p class="card_column__top subP">sms</p>
+                            <p class="card_column__bottom">/</p>
+                        </div>
                     </div>
                     <div class="card_bottom">
-                        <h5></h5>
-                        <p class="subP"></p>
-                        <img src="" alt="" class="card_button">
+                        <h5 class="price">500 USDT</h5>
+                        <p class="subP cardT">Тариф подойдет для тех кому важен безлимитный скоростной интернет по России и возможность пользоваться мобильной связью и интернетом в поездках за рубежом. В тариф так же входит 500 mb интернет трафика. Имеется возможность докупать пакеты интернет трафика и GSM звонков.</p>
                     </div>
+                    <img src="static/svg/Arrow.svg" alt="" class="card_button">
                 </div>
                 <div class="empty_card">
-                    <img src="" alt="">
+                    <img src="static/svg/TarifCard.svg" alt="TarifCard">
                 </div>
             </div>
         </section>
-        <section class="advantage">
-            <div class="conteiner">
+        <section class="advantage" id="advantage">
+            <div class="top_conteiner">
                 <div class="conteiner_head">
                     <h4>Преимущества</h4>
                     <span class="dots"></span>
                 </div>
                 <div class="advantage_top">
                     <div class="advantage_item">
-                        <h2></h2>
-                        <p></p>
+                        <h2><span class="gray">0</span>1.</h2>
+                        <p>Бесплатная<br>связь на целый год</p>
                     </div>
                     <span class="slash"></span>
                     <div class="advantage_item">
-                        <h2></h2>
-                        <p></p>
+                        <h2><span class="gray">0</span>2.</h2>
+                        <p>Выгодные тарифы<br>для каждого абонента</p>
                     </div>
                     <span class="slash"></span>
                     <div class="advantage_item">
-                        <h2></h2>
-                        <p></p>
+                        <h2><span class="gray">0</span>3.</h2>
+                        <p>Отсутствие роуминга<br>по всему миру</p>
                     </div>
                 </div>
-                <div class="advantage_bottom">
-                    <img src="" alt="">
+            </div>
+            <div class="bottom_conteiner">
+                <div class="phone_wrapp">
                     <div class="phone">
                         <div class="phone_top">
                             <div class="phone_bar">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
+                                <img src="static/svg/MobIcon1.svg" alt="MobIcon1">
+                                <img src="static/svg/MobIcon2.svg" alt="MobIcon2">
+                                <img src="static/svg/MobIcon3.svg" alt="MobIcon3">
+                                <img src="static/svg/MobIcon4.svg" alt="MobIcon4">
+                                <img src="static/svg/MobIcon5.svg" alt="MobIcon5">
                             </div>
-                            <span></span>
-                            <span></span>
-                            <img src="" alt="">
+                            <span class="smalP">Amir Cell</span>
+                            <span class="hr"></span>
+                            <img src="static/svg/Gear.svg" alt="gear">
                         </div>
                         <div class="phone_content">
                             <div class="phone_content__items">
-                                <span></span>
-                                <span class="arrow_top"></span>
-                                <p></p>
+                                <span class="green">AC</span>
+                                <img src="static/svg/ArrowTop.svg" alt="arrow">
+                                <p>Одно из основных преимуществ нашего предложения: при путешествиях по всему миру абоненты могут пользоваться услугами связи по тарифам местных сотовых операторов, без роуминга</p>
                             </div>
                             <div class="phone_content__items">
-                                <span></span>
-                                <span class="arrow_top"></span>
-                                <p></p>
+                                <span class="green">AC</span>
+                                <img src="static/svg/ArrowTop.svg" alt="arrow">
+                                <p>Нет необходимости искать и покупать местные SIM-карты в разных странах для работы по локальным тарифам, чтобы сэкономить на стоимостисвязи, а также пополнять их баланс и общаться с местной техподдержкой на иностранных языках при возникновении проблем. Одна и та же SIM карта (RSP SIM) работаетпо всему миру, без роуминга, по локальным тарифам каждой страны, с русскоязычной техподдержкой</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="russia">
+        <section class="russia" id="russia">
             <div class="conteiner">
                 <div class="conteiner_head">
                     <h4>Россия</h4>
                     <span class="dots"></span>
                 </div>
-                <img src="" alt="">
-                <div class="russia_table">
-                    <div class="russia_table__head">
-                        <span></span>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                    <div class="russia_table__body">
-                        <div class="russia_table__row">
-                            <p class="left"></p>
-                            <p></p>
+                <img src="static/svg/Russia.svg" alt="Russia">
+                <div class="russia_visua">
+                    <div class="russia_table">
+                        <div class="russia_table__head">
+                            <div class="level">
+                                <span class="greeCircle"></span>
+                            </div>
+                            <p class="tableItem">Депозит<br>
+                                год USDT</p>
                             <span class="vertHr"></span>
-                            <p></p>
+                            <p class="tableItem">Интернет Гб</p>
                             <span class="vertHr"></span>
-                            <p></p>
+                            <p class="tableItem">SMS</p>
                             <span class="vertHr"></span>
-                            <p></p>
+                            <p class="tableItem">GSM<br>
+                                домашний, мин.</p>
+                        </div>
+                        <div class="russia_table__body">
+                            <div class="russia_table__row">
+                                <div class="level">
+                                    <p class="left">Star</p>
+                                </div>
+                                <p class="tableItem">300</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">25Гб+<br>
+                                    Безлимит LTE</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">500</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">1000</p>
+                            </div>
+                            <div class="russia_table__row">
+                                <div class="level">
+                                    <p class="left">Moon</p>
+                                </div>
+                                <p class="tableItem">500</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">25Гб+<br>
+                                    Безлимит LTE</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">500</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">1000</p>
+                            </div>
+                            <div class="russia_table__row">
+                                <div class="level">
+                                    <p class="left">Galaxy</p>
+                                </div>
+                                <p class="tableItem">800</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">35Гб+<br>
+                                    Безлимит LTE</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">1000</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">2000</p>
+                            </div>
+                            <div class="russia_table__row">
+                                <div class="level">
+                                    <p class="left">Universe</p>
+                                </div>
+                                <p class="tableItem">1300</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">50Гб+<br>
+                                    Безлимит LTE</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">1000</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">4000</p>
+                            </div>
+                            <div class="russia_table__row">
+                                <div class="level">
+                                    <p class="left">Travel</p>
+                                </div>
+                                <p class="tableItem">500</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">Безлимит</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">0</p>
+                                <span class="vertHr"></span>
+                                <p class="tableItem">0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="world">
+        <section class="world" id="world">
             <div class="conteiner">
                 <div class="conteiner_head">
                     <h4>Весь мир</h4>
                     <span class="dots"></span>
                 </div>
+                <img src="static/svg/World.svg" alt="World">
+            <div class="world_visua">
+                <div class="world_table">
+                    <div class="world_table__head">
+                        <div class="level">
+                            <span class="greeCircle"></span>
+                        </div>
+                        <p class="tableItem">GSM<br>
+                            входящие мин.</p>
+                        <span class="vertHr"></span>
+                        <p class="tableItem">Интернет Мб</p>
+                    </div>
+                    <div class="world_table__body">
+                        <div class="world_table__row">
+                            <div class="level">
+                                <p class="left">Star</p>
+                            </div>
+                            <p class="tableItem">0</p>
+                            <span class="vertHr"></span>
+                            <p class="tableItem">0</p>
+                        </div>
+                        <div class="world_table__row">
+                            <div class="level">
+                                <p class="left">Moon</p>
+                            </div>
+                            <p class="tableItem">20</p>
+                            <span class="vertHr"></span>
+                            <p class="tableItem">500</p>
+                        </div>
+                        <div class="world_table__row">
+                            <div class="level">
+                                <p class="left">Galaxy</p>
+                            </div>
+                            <p class="tableItem">30</p>
+                            <span class="vertHr"></span>
+                            <p class="tableItem">800</p>
+                        </div>
+                        <div class="world_table__row">
+                            <div class="level">
+                                <p class="left">Universe</p>
+                            </div>
+                            <p class="tableItem">40</p>
+                            <span class="vertHr"></span>
+                            <p class="tableItem">1300</p>
+                        </div>
+                        <div class="world_table__row">
+                            <div class="level">
+                                <p class="left">Travel</p>
+                            </div>
+                            <p class="tableItem">0</p>
+                            <span class="vertHr"></span>
+                            <p class="tableItem">500</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <img src="" alt="">
-            <div class="world_table">
-                <div class="world_table__head">
-                    <span></span>
-                    <p></p>
-                    <span class="vertHr"></span>
-                    <p></p>
-                </div>
-                <div class="world_table__body">
-                    <div class="world_table__row">
-                        <p class="left"></p>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                    <div class="world_table__row">
-                        <p class="left"></p>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                    <div class="world_table__row">
-                        <p class="left"></p>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                    <div class="world_table__row">
-                        <p class="left"></p>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                    <div class="world_table__row">
-                        <p class="left"></p>
-                        <p></p>
-                        <span class="vertHr"></span>
-                        <p></p>
-                    </div>
-                </div>
             </div>
         </section>
-        <section class="howto">
+        <section class="howto" id="howto">
             <div class="conteiner">
                 <div class="conteiner_head">
                     <h4>Как заказать?</h4>
                     <span class="dots"></span>
                 </div>
-            </div>
-            <div class="howto_row">
-                <img src="" alt="">
-                <div class="howto_row__right">
-                    <div class="circle"></div>
-                    <p></p>
-                    <a href=""></a>
+                <div class="howto_row">
+                    <img src="static/svg/Hand.svg" alt="hand">
+                    <div class="howto_row__right">
+                        <div class="howto_text">
+                            <div class="circle">
+                                <svg viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="71" cy="71" r="36.5" stroke="#66B700" stroke-dasharray="4 4" id="howto_circle"/>
+                                    <circle cx="71" cy="71" r="16" fill="#66B700" fill-opacity="0.2"/>
+                                    <circle cx="71" cy="71" r="6" fill="#66B700"/>
+                                </svg>                                
+                            </div>
+                            <p>Перейдите в личный кабинет, для<br>оформления заказа сим-карты</p>
+                        </div>
+                        <a href="https://account.amir.capital/front/auth/sign-in">Перейти в личный кабинет</a>
+                    </div>
                 </div>
             </div>
         </section>
         <footer>
-            <img src="" alt="">
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-            <p class="subP"></p>
+            <div class="conteiner">
+                <img src="static/svg/LogoGorizontal.svg" alt="logo" class="logoG">
+                <img src="static/svg/LogoVertical.svg" alt="logo" class="logoV">
+                <ul class="foot-menu">
+                    <li><a href="#tariffs" class="subP">Тарифы</a></li>
+                    <li><a href="#advantage" class="subP">Преимущества</a></li>
+                    <li><a href="#russia" class="subP">Россия</a></li>
+                    <li><a href="#world" class="subP">Весь мир</a></li>
+                    <li><a href="#howto" class="subP">Как заказать?</a></li>
+                </ul>
+                <p class="subP green">AMIR CELL 2020</p>
+            </div>
         </footer>
     </div>
+<script src="static/js/main.js"></script>
 <script src="static/js/libs.min.js"></script>
 </body>
 </html>
