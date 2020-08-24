@@ -6,17 +6,18 @@
 .world .conteiner{
     width 100vw
 }
-.russia img{
+.russia_svg{
     position absolute
     z-index -1
     right -400px
     top 100px
 }
-.world img{
+.world_svg{
     position absolute
     z-index -1
     right -300px
     top 100px
+    width 100%
 }
 .greeCircle{
     display block
@@ -70,7 +71,6 @@
 .russia_table,
 .world_table{
     text-align center
-    margin-top 136px
 }
 .russia_table__head,
 .world_table__head{
@@ -96,7 +96,6 @@
     flex-direction column
     background #FFFFFF
     border 1px solid #F5F5F5
-    box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
     border-radius 18px
     padding 0 45px 0 30px
 }
@@ -110,17 +109,18 @@
 .russia_visua,
 .world_visua{
     width 100%
-    overflow-x scroll
+    margin-top 136px
 }
 @media all and (max-width 1024px) {
-    .russia .conteiner{
-        // overflow-x scroll
+    .russia_visua,
+    .world_visua{
+        overflow-x auto
     }
 }
 @media all and (max-width 920px) {
-    .russia_table,
-    .world_table{
-        margin-top 400px
+    .russia_visua,
+    .world_visua{
+        margin-top 300px
     }    
 }
 @media all and (max-width 580px) {
@@ -128,5 +128,21 @@
     .world_table__row{
         margin 20px 0
     }
-    
+    .russia img{
+        width 150%
+        right -50%
+        top 180px
+    }
+    .world_svg{
+        width 150%
+        right -50%
+        top 180px
+    }
+}
+@media all and (max-width 850px) and (orientation landscape) {
+    .world img,
+    .russia img{
+        width 100%
+        right 0
+    }
 }

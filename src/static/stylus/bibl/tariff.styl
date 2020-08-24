@@ -14,6 +14,7 @@
     overflow hidden
     position relative
     border 1px solid #F5F5F5
+    transition 1s
 }
 .card_head{
     display flex
@@ -22,7 +23,7 @@
     position relative
     border 1px solid #F3F3F3
     overflow hidden
-    height 120px
+    min-height 120px
     margin-bottom 24px
 }
 .card_head h3{
@@ -40,6 +41,7 @@
     position absolute
     right 0
     top 0
+    z-index -1
 }
 .card_content{
     padding 0 24px
@@ -77,18 +79,25 @@
     align-self center
     width 100%
 }
+.cardT{
+    overflow hidden
+    // max-height 76px
+    transition .5v s
+}
 .card_column__bottom:last-child{
     margin-right 0
 }
 img.card_column__bottom{
     padding 28px
     max-width 92px
+    height 100%
 }
 .card_bottom{
     padding 0 24px 70px
     display flex
     flex-direction column
     position relative
+    overflow hidden
 }
 .price{
     position relative
@@ -150,5 +159,21 @@ img.card_column__bottom{
     }
     .card_button{
         cursor default
+    }
+}
+@media all and (max-width 580px) {
+    .card{
+        max-width 370px
+    }
+    .empty_card img{
+        width 70%
+        padding 30px
+    }
+}
+@media all and (max-width 850px) and (orientation landscape) {
+    .card,
+    .empty_card{
+        max-width 305px !important
+        margin 50px 5px 0 !important
     }
 }

@@ -25,7 +25,8 @@
 }
 .promo_main__right img{
     object-fit cover
-    height 100%
+    margin-top 15%
+    height 85%
     min-height 400px
 }
 .promo_box{
@@ -33,6 +34,7 @@
     display flex
     align-items center
     position relative
+    width fit-content
 }
 .promo_link{
     text-transform uppercase
@@ -51,7 +53,7 @@
 .promo .arrows{
     position absolute
     top 50%
-    right 0px
+    right -65px
     transform translate(0, -50%)
 }
 h1::before{
@@ -72,5 +74,32 @@ h1::before{
 @media all and (max-width 920px) {
     .promo_main__right{
         right -300px
+    }
+    .promo_main__left{
+        margin-left 40px
+    }
+}
+@media all and (max-width 580px) {
+    .promo_link{
+        padding 20px 35px
+    }
+    h1{
+        word-spacing 900px
+    }
+    .promo_main__left p{
+        max-width 200px
+    }
+}
+@media all and (max-width 350px) {
+    .promo_main__left{
+        margin-left 10px
+    }
+    .promo .arrows{
+        right -15px
+    }
+}
+@media all and (max-width 850px) and (orientation landscape) {
+    .promo{
+        padding-bottom 100px
     }
 }
