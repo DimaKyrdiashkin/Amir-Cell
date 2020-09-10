@@ -1,3 +1,5 @@
+.howto
+    background-color #FFFFFF
 .howto .conteiner_head{
     margin-top 9.111111em
 }
@@ -7,9 +9,21 @@
     justify-content space-between
     max-width 1000px
 }
-.howto_row>img{
-    width 40%
-}
+.hand
+    height 480px
+    width 480px
+    background url('../svg/HandFrame.svg') center no-repeat
+    background-size cover
+    position relative
+    overflow hidden
+.hand > img
+    position absolute
+    height 90%
+    bottom -45px
+    left 50%
+    transform translateX(-50%)
+    transform-origin bottom
+    animation hand 10s infinite
 .howto_row__right{
     display flex
     flex-direction column
@@ -18,9 +32,9 @@
     width 50%
 }
 .howto a{
-    background #66B700
-    border-radius 4px
-    padding 14px 25px
+    background #645E9D
+    border-radius 16px
+    padding 20px 70px
     color #fff
     display flex
     width fit-content
@@ -68,6 +82,18 @@
         transform rotate(360deg)
     }
 }
+@keyframes hand{
+    
+    0%{
+        transform rotate(-10deg) translateX(-50%)
+    }
+    50%{
+        transform rotate(10deg) translateX(-50%)
+    }
+    100%{
+        transform rotate(-10deg) translateX(-50%)
+    }
+}
 @media all and (max-width 1280px) {
     .howto_text>p{
         padding 15px 25px
@@ -75,8 +101,22 @@
     .circle{
         display none
     }
+    .hand{
+        height 425px
+        width 425px
+    }
 }
-@media all and (max-width 580px) {
+@media all and (max-width 920px) {
+    .hand{
+        height 350px
+        width 350px
+    }
+}
+@media all and (max-width 768px) {
+    .hand{
+        height 350px
+        width 350px
+    }
     .howto_row{
         flex-direction column
         justify-content center
@@ -88,6 +128,12 @@
     .howto_row__right{
         width 100%
         margin-top 45px
+    }
+}
+@media all and (max-width 580px) {
+    .hand{
+        height 300px
+        width 300px
     }
 }
 @media all and (max-width 850px) and (orientation landscape) {

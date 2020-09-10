@@ -1,3 +1,7 @@
+.tariffs{
+    background #fff
+    padding-bottom 200px
+}
 .tariffs .conteiner{
     display flex
     flex-wrap wrap
@@ -6,7 +10,7 @@
 .card{
     margin-top 50px
     max-width 366px
-    height fit-content
+    height 515px
     display flex
     flex-direction column
     box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
@@ -16,6 +20,15 @@
     border 1px solid #F5F5F5
     transition 1s
 }
+.card::before
+    content ''
+    display block
+    width 100%
+    position absolute
+    bottom 0
+    height 100px
+    background linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 46.35%)
+    z-index 99
 .card_head{
     display flex
     justify-content space-between
@@ -79,10 +92,16 @@
     align-self center
     width 100%
 }
+.card
+    max-height 515px
+.card_bottom
+    // overflow hidden
+    transition .5s
+.card_bottom.open
+    transform translateY(-170px)
 .cardT{
-    overflow hidden
     // max-height 76px
-    transition .5v s
+    transition .3s linear
 }
 .card_column__bottom:last-child{
     margin-right 0
@@ -93,11 +112,14 @@ img.card_column__bottom{
     height 100%
 }
 .card_bottom{
-    padding 0 24px 70px
+    height 170px
+    padding 0 24px
+    margin-bottom 70px
     display flex
     flex-direction column
     position relative
-    overflow hidden
+    // overflow hidden
+    background #fff
 }
 .price{
     position relative
@@ -119,6 +141,9 @@ img.card_column__bottom{
     left 50%
     transform translateX(-50%)
     transition .4s
+    background #fff
+    border-radius 50%
+    z-index 999
 }
 .card_button.open{
     transform translateX(-50%) rotate(180deg)

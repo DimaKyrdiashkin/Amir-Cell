@@ -2,11 +2,30 @@
     display flex
     flex-direction column
     align-items center
+    background-color #FFFFFF
+    background-image url('../img/Travel2.jpg')
+    background-repeat no-repeat
+    background-position center top  
+    position relative
+}
+.advantage_svg{
+    position absolute
+    z-index -1
+    top -119px
+    left 10%
+}
+.advantage .dots{
+    background #ffffffa6
+}
+.advantage .dots::before{
+    background #fff
+}
+.advantage .dots::after{
+    background #fff
+    opacity .3
 }
 .top_conteiner{
-    background #FCFCFC
     width 100%
-    margin-top 92px
     display flex
     flex-direction column
     align-items center
@@ -14,12 +33,13 @@
 }
 .advantage .conteiner_head{
     max-width 1174px
+    color #fff
+    margin-top 3em
 }
 .advantage_top{
     display flex
     justify-content space-between
-    margin-top 84px
-    margin-bottom 160px
+    margin 70px 0
     width 100%
     max-width 1200px
 }
@@ -27,6 +47,7 @@
     position relative
     z-index 1
     width 91px
+    color #fff
 }
 .advantage_item>h2::before{
     content ''
@@ -35,22 +56,15 @@
     width 104px
     height 104px
     border-radius 50%
-    background #fff
+    background: rgba(255, 255, 255, 0.2);
     z-index -1
     border 1px dashed #DCDCDC
     left -50%
     bottom 50%
     transform translate(50%, 50%)
 }
-.advantage_item>h2::after{
-    content ''
-    display block
-    position absolute
-    width 129px
-    height 2px
-    background linear-gradient(90deg, #66B700 0%, rgba(102, 183, 0, 0) 100%)
-}
 .advantage_item>p{
+    color #fff
     position relative
     z-index 2
     margin-top 44px
@@ -66,9 +80,6 @@
 .bottom_conteiner{
     position relative
     width 100vw
-    background url('../img/Travel.png')
-    background-repeat no-repeat
-    background-position center top
 }
 .bottom_conteiner>img{
     margin-top -400px
@@ -83,9 +94,8 @@
 }
 .phone{
     position relative
-    max-width 480px
+    max-width 380px
     background #fff
-    margin-top 104px
     border-radius 36px
     padding 37px 16px 100px
     box-shadow 0px 15px 40px rgba(0, 0, 0, 0.1)
@@ -97,7 +107,7 @@
     width 110px
     height 4px
     border-radius 4px
-    background #66B700
+    background #645E9D
     left 50%
     bottom 20px
     transform translateX(-50%)
@@ -113,7 +123,7 @@
 .phone_top .hr{
     width 40px
     height 4px
-    background #66B700
+    background #645E9D
     border-radius 4px
     position absolute
     left 50%
@@ -125,6 +135,10 @@
     justify-content space-between
     width 100%
     margin-bottom 31px
+}
+.phone_bar > img{
+    height 40px
+    width 40px
 }
 .phone_content__items{
     display flex
@@ -140,6 +154,41 @@
 .phone_content__items>p{
     margin-top 10px
 }
+span.blue{
+    font-size 0.666666em
+}
+#wifi1
+    animation arrow 4s linear infinite
+#wifi2
+    animation arrow 4s linear infinite
+    animation-delay .4s
+#wifi3
+    animation arrow 4s linear infinite
+    animation-delay .8s
+#wifi4
+    animation arrow 4s linear infinite
+    animation-delay 1.2s
+#wifi5
+    animation arrow 4s linear infinite
+    animation-delay 1.6s
+#wifi6
+    animation arrow 4s linear infinite
+    animation-delay 2s
+#wifi7
+    animation arrow 4s linear infinite
+    animation-delay 2.4s
+#wifi8
+    animation arrow 4s linear infinite
+    animation-delay 2.8s
+#wifi9
+    animation arrow 4s linear infinite
+    animation-delay 3.2s
+#wifi10
+    animation arrow 4s linear infinite
+    animation-delay 3.6s
+#wifi11
+    animation arrow 4s linear infinite
+    animation-delay 4s
 //meida
 @media all and (max-width 1280px) {
     .top_conteiner,
@@ -149,8 +198,10 @@
     .phone{
         max-width 400px
     }
+    .advantage_svg{
+        left -5%
+    }
     .phone_bar>img{
-        width 48px
         object-fit: cover;
         height intrinsic
     }
@@ -166,8 +217,11 @@
         max-width 360px
         padding 23px 12px 70px
     }
-    .phone_bar>img{
-        width 36px
+    .advantage_svg{
+        top -84px
+    }
+    .advantage_svg > svg{
+        width 1000px
     }
 }
 @media all and (max-width 580px) {
@@ -192,16 +246,10 @@
     }
     .phone_wrapp{
         justify-content center
-        margin-top 350px
+        margin-top 325px
     }
     .top_conteiner{
         margin-top 40px
-    }
-    .bottom_conteiner{
-        background url('../img/TravelMob.png')
-        background-repeat no-repeat
-        background-position center top
-        background-size contain
     }
     .phone{
         border-radius 28px
@@ -210,6 +258,10 @@
     .top_conteiner{
         padding 0 20px
     }
+    .advantage_svg {
+        left 50%
+        transform translateX(-50%)
+}
 }
 @media all and (max-width 350px) {
     .phone_wrapp{
@@ -222,5 +274,8 @@
     }
     .slash{
         margin-right 10%
+    }
+    .advantage_svg{
+        left -25%
     }
 }

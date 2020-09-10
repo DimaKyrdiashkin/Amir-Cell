@@ -1,6 +1,42 @@
+.russia, .world
+    background-color #FFFFFF
+.world .conteiner_head,
+.russia .conteiner_head{
+    height 244px
+    margin-left 0
+    border-radius 32px
+    padding-left 60px
+    padding-bottom 48px
+    color #fff
+    display flex
+    align-items flex-end
+}
+.russia .conteiner_head{
+    background url('../img/head1.jpg') center no-repeat
+    background-size: cover;
+}
+.world .conteiner_head{
+    background url('../img/head2.jpg') center no-repeat
+    background-size: cover;
+}
+.russia_visua::-webkit-scrollbar,
+.world_visua::-webkit-scrollbar
+    height 6px
+    white-space 100%
+.russia_visua::-webkit-scrollbar-track,
+.world_visua::-webkit-scrollbar-track
+    background transparent
+    padding 0 6px
+.world_visua::-webkit-scrollbar-thumb
+    background url('../img/scrollG.png') center no-repeat
+    background-size contain
+.russia_visua::-webkit-scrollbar-thumb
+    background url('../img/scrollGP.png') center no-repeat
+    background-size contain
 .russia .conteiner_head,
 .world .conteiner_head{
-    margin-top 9.111111em
+    margin-top 6.111111em
+    z-index 9
 }
 .russia .conteiner,
 .world .conteiner{
@@ -27,6 +63,14 @@
     border 2px solid #1B8508
     border-radius 50%
 }
+.purpleCircle{
+    display block
+    position relative
+    width 14px
+    height 14px
+    border 2px solid #645E9D
+    border-radius 50%
+}
 .greeCircle::before{
     content ''
     position absolute
@@ -34,6 +78,18 @@
     width 6px
     height 6px
     background #66B700
+    border-radius 50%
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+}
+.purpleCircle::before{
+    content ''
+    position absolute
+    display block
+    width 6px
+    height 6px
+    background #918BCB
     border-radius 50%
     top 50%
     left 50%
@@ -54,6 +110,9 @@
 .left{
     transform rotate(-90deg) translateY(3px)
     transform-origin center
+}
+.russia .tableItem{
+    color #645E9D
 }
 .tableItem{
     width 17%
@@ -121,7 +180,11 @@
     .russia_visua,
     .world_visua{
         margin-top 300px
-    }    
+    }
+    .russia .conteiner_head,
+    .world .conteiner_head{
+        height 180px
+    }
 }
 @media all and (max-width 580px) {
     .russia_table__row,
@@ -137,6 +200,12 @@
         width 150%
         right -50%
         top 180px
+    }
+    .russia .conteiner_head,
+    .world .conteiner_head{
+        height 120px
+        padding-left 30px
+        padding-bottom 25px
     }
 }
 @media all and (max-width 850px) and (orientation landscape) {

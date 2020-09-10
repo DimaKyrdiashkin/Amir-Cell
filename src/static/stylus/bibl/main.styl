@@ -1,9 +1,9 @@
-::-webkit-scrollbar
+body::-webkit-scrollbar
     width 12px
-::-webkit-scrollbar-track
+body::-webkit-scrollbar-track
     background transparent
     padding 0 6px
-::-webkit-scrollbar-thumb
+body::-webkit-scrollbar-thumb
     background url('../img/scroll.png') center no-repeat
     background-size contain
 *{
@@ -17,6 +17,7 @@ h1{
     font-size 5.333333em
     line-height 120%
     position relative
+    color #fff
 }
 h2{
     font-size 3.333333em
@@ -48,10 +49,13 @@ p{
     color #9A9A9A
 }
 .gray{
-    color #DCDCDC
+    color #B5B2D0
 }
 .green{
     color #66B700
+}
+.blue{
+    color #3693FF
 }
 ul, li{
     list-style none
@@ -76,12 +80,16 @@ body{
 section{
     display flex
     justify-content center
+    transform: translateZ(0px);
+    width 100%
 }
 .wrapper{
     display flex
     flex-direction column
     align-items center
     overflow hidden
+    // perspective: 1px;
+    position relative
 }
 .conteiner{
     max-width 1200px

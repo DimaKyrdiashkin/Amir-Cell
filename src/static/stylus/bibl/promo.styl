@@ -1,31 +1,63 @@
 .promo{
-    background #FCFCFC
     min-height 100vh
     width 100%
+    transition 1s
 }
+.filter{
+    height 100vh
+    width 100%
+    position fixed
+    top 0
+    bottom 0
+    // transition all .5s linear 0s
+}
+.filter>img{
+    width 100vw
+    min-height 120vh
+    margin-top -10vh
+    object-fit cover
+}
+.down{
+    position absolute
+    left 50%
+    bottom 100px
+    transform translateX(-50%)
+}
+#arrow1
+    animation arrow 2s linear infinite
+    animation-delay .5s
+#arrow2
+    animation arrow 2s linear infinite
+    animation-delay 1s
+#arrow3
+    animation arrow 2s linear infinite
+    animation-delay 1.5s
 .promo_main{
     display flex
     justify-content space-between
     height 70%
     align-items center
     position relative
+    // transition all .5s linear 0s
+    height: 80vh;
 }
 .promo_main__left{
-    margin-top 50px
     margin-left 75px
     z-index 1
 }
 .promo_main__left p{
     max-width 360px
+    color #fff
 }
 .promo_main__right{
     position absolute
     right -100px
     height 100%
+    max-height 750px
 }
 .promo_main__right img{
     object-fit cover
-    margin-top 15%
+    margin-top 10%
     height 85%
     min-height 400px
 }
@@ -38,15 +70,20 @@
 }
 .promo_link{
     text-transform uppercase
+    text-align center
     letter-spacing 0.33em
-    color #1B8508
+    color #fff
     padding 20px 60px
-    border 1px dashed #66B700
+    border 1px dashed #fff
     border-radius 8px
     transition .4s
+    background rgba(255, 255, 255, 0.2)
+    border 1px dashed #FFFFFF
+    backdrop-filter blur(5px)
 }
 .promo_link:hover{
-    background #E9F4DB
+    // backdrop-filter none
+    background #645e9da1
     transition .4s
     box-shadow 0px 5px 20px rgba(0, 0, 0, 0.1)
 }
@@ -64,7 +101,18 @@ h1::before{
     width 63px
     height 3px
     border-radius 2px
-    background #66B700
+    background #fff
+}
+@keyframes arrow{
+    0%{
+        opacity 0
+    }
+    50%{
+        opacity 1
+    }
+    100%{
+        opacity 0
+    }
 }
 @media all and (max-width 1280px) {
     .promo_main__right{
@@ -73,7 +121,7 @@ h1::before{
 }
 @media all and (max-width 920px) {
     .promo_main__right{
-        right -300px
+        right -250px
     }
     .promo_main__left{
         margin-left 40px
@@ -89,17 +137,51 @@ h1::before{
     .promo_main__left p{
         max-width 200px
     }
+    .promo_main__right{
+        top -100px
+    }
 }
-@media all and (max-width 350px) {
+@media all and (max-width 375px) {
+    .promo_main__right img{
+        margin-top 5%
+    }
     .promo_main__left{
         margin-left 10px
     }
     .promo .arrows{
         right -15px
     }
+    .promo_main__right{
+        right -250px
+    }
+    .filter{
+        transition 1s
+    }
 }
 @media all and (max-width 850px) and (orientation landscape) {
     .promo{
         padding-bottom 100px
+    }
+    .promo_main__right > img{
+        margin-top 0
+    }
+    .promo_main__right{
+        top -75px
+    }
+    .promo_box{
+        margin-top 40px
+    }
+    h1::before{
+        display none
+    }
+    .filter>img,
+    .promo {
+        min-height 155vh
+    }
+    .promo_link{
+        padding 20px 45px
+    }
+    .down{
+        display none
     }
 }

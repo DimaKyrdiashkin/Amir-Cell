@@ -1,11 +1,12 @@
 const card =  document.querySelectorAll('.cardT');
+const cardBottom = document.querySelectorAll('.card_bottom');
 const cardHeight = [];
 const minH = [];
 
 card.forEach((item)=>{
     cardHeight.push(item.clientHeight + 2)
 });
-document.querySelector('.cardT').style.maxHeight = "76px";
+// document.querySelector('.cardT').style.maxHeight = "76px";
 // // cut text
 // const textFull = document.querySelectorAll('.cardT');
 const button = document.querySelectorAll('.card_button');
@@ -40,11 +41,11 @@ const button = document.querySelectorAll('.card_button');
 const open=(i)=>{
     // document.querySelector('.card_button').className.split(' ')[1]
     if(button[i].className.split(' ')[1] == 'open'){
-        card[i].style.maxHeight = '76px';
+        cardBottom[i].classList.remove("open");
         button[i].classList.remove("open");
         return false
     }else{
-        card[i].style.maxHeight = `${cardHeight[i]}px`;
+        cardBottom[i].classList.add('open');
     }
     // if(textFull[i].innerText.length >153){
     //     card[i].style.height = `${minH[i]}px`;
@@ -90,3 +91,54 @@ mobButton.forEach((item, i)=>{
     })
 });
 
+//Parallax
+// pageYOffset
+let filter = document.querySelector('.promo_main');
+let filter2 = document.querySelector('.filter');
+let count = pageYOffset;
+if(count <700){
+    // filter.style.transform = `translateY(${count/5}px)`;
+    // filter2.style.transform = `translateY(${count/8}px)`;
+}else{
+    count = 700;
+    // filter.style.transform = `translateY(${count/5}px)`;
+    // filter2.style.transform = `translateY(${count/8}px)`;
+}
+
+// window.addEventListener('scroll', ()=>{
+//     if(pageYOffset < 0){
+//         filter.style.transform = `translateY(${0}px)`;
+//         filter2.style.transform = `translateY(${0}px)`;
+//     }else{
+//         filter.style.transform = `translateY(${Math.round(pageYOffset/2)}px)`;
+//         filter2.style.transform = `translateY(${Math.round(pageYOffset/2.5)}px)`;
+//     }
+// });
+
+// $('body').bind('mousewheel', (e) => {
+//     if (e.originalEvent.wheelDelta >= 0 && count > 0) {
+//         count-=pageYOffset
+//         // alert(1)
+//     } else if(count < 700){
+//         count+=pageYOffset
+//         // alert(2)
+//     };
+//     filter.style.transform = `translateY(${count/5}px)`;
+//     filter2.style.transform = `translateY(${count/8}px)`;
+// });
+// var lastY;
+// $('body').bind('touchmove', (e) => {
+//     var currentY = e.originalEvent.touches[0].clientY;
+//     if(currentY > lastY && count > 0){
+//         count-=10
+//         if(pageYOffset == 0){
+//             count = 0
+//         }
+//     }else if(currentY < lastY && count < 800){
+//         count+=10
+//         console.log(count);
+//     }
+//     lastY = currentY;
+//     filter.style.transform = `translateY(${count/5}px)`;
+//     filter2.style.transform = `translateY(${count/8}px)`;
+// });
