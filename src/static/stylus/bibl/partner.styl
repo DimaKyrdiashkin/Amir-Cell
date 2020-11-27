@@ -1,0 +1,62 @@
+.partner
+  padding-top 132px
+  background #fff
+
+  &_box
+    margin-top 80px
+    display flex
+    justify-content space-between
+    border-radius 12px
+    overflow hidden
+    background #FCFCFC
+
+    &__left
+      width 45%
+      padding 68px 68px 55px 68px
+
+      &>ul
+        position relative
+
+        &::before
+          content ''
+          display block
+          position absolute
+          height 95%
+          width 2px
+          left 0
+          top 50%
+          transform translateY(-50%)
+          background #645E9D
+
+        &>li
+          padding-left 40px
+          margin-bottom 44px
+          position relative
+
+          &:before
+            content ''
+            display block
+            width 12px
+            height 12px
+            border-radius 50%
+            background #645E9D
+            position absolute
+            left 1px
+            top 50%
+            transform translate(-50%, -50%)
+
+          &:last-child
+            margin-bottom 0
+      &>a
+        background linear-gradient(91.25deg, #645E9D 0%, #9E7AC1 100%)
+        padding 18px 44px
+        border-radius 4px
+        display block
+        width fit-content
+        margin-top 52px
+
+    &__right
+      width auto
+      display flex
+      justify-content flex-end
+      background linear-gradient(72.39deg, #645E9D 32.15%, #9E7AC1 100%)
