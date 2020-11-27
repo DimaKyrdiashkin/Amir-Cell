@@ -1,166 +1,180 @@
 body::-webkit-scrollbar
-    width 12px
+  width 12px
+
 body::-webkit-scrollbar-track
-    background transparent
-    padding 0 6px
+  background transparent
+  padding 0 6px
+
 body::-webkit-scrollbar-thumb
-    background url('../img/scroll.png') center no-repeat
-    background-size contain
-*{
-    margin 0
-    padding 0
-    scroll-behavior smooth
-    box-sizing border-box
-    font-family Roboto
-}
-h1{
-    font-size 5.333333em
-    line-height 120%
+  background url('../img/scroll.png') center no-repeat
+  background-size contain
+
+*
+  margin 0
+  padding 0
+  scroll-behavior smooth
+  box-sizing border-box
+  font-family Roboto
+  
+h1
+  font-size 5.333333em
+  line-height 120%
+  color #fff
+h2
+  font-size 3.333333em
+  line-height 120%
+  color #0F0F0F
+
+h4
+  font-size 2.666666em
+  line-height 120%
+  color #0F0F0F
+
+h4
+  font-size 1.888888em
+  line-height 130%
+  color #0F0F0F
+
+h5
+  font-size 1.666666em
+  line-height 140%
+  color #0F0F0F
+
+p
+  font-size 1em
+  line-height 140%
+
+.subP
+  font-size 0.777777em
+  line-height 140%
+
+.smalP
+  font-size 0.666666em
+  line-height 150%
+  color #9A9A9A
+
+.gray
+  color #B5B2D0
+
+.greenText
+  color #66B700
+
+.blue
+  color #3693FF
+
+.greenMark
+  display block
+  width 12px
+  height 12px
+  background #66B700
+  border-radius 50%
+  transform translateY(-20%)
+
+ul
+li
+  list-style none
+
+a
+  outline none
+  text-decoration none
+  color #fff
+
+.hidden
+  display none
+
+.show
+  display block
+
+body
+  font-size 18px
+  color #5C5C5C
+  overflow-x hidden
+
+section
+  display flex
+  justify-content center
+  transform: translateZ(0px);
+  width 100%
+
+.wrapper
+  display flex
+  flex-direction column
+  align-items center
+  overflow hidden
+
+.container
+  max-width 1200px
+  width 100vw
+  position relative
+
+  &>h4
+    text-align center
+
+.banner
+  padding-top 132px
+  background #fff
+
+  &_box
+    border-radius 12px
     position relative
-    color #fff
-}
-h2{
-    font-size 3.333333em
-    line-height 120%
-}
-h3{
-    font-size 2.666666em
-    line-height 120%
-}
-h4{
-    font-size 1.888888em
-    line-height 130%
-}
-h5{
-    font-size 1.666666em
-    line-height 140%
-}
-p{
-    font-size 1em
-    line-height 140%
-}
-.subP{
-    font-size 0.777777em
-    line-height 140%
-}
-.smalP{
-    font-size 0.666666em
-    line-height 150%
-    color #9A9A9A
-}
-.gray{
-    color #B5B2D0
-}
-.green{
-    color #66B700
-}
-.blue{
-    color #3693FF
-}
-ul, li{
-    list-style none
-}
-a{
-    outline none
-    text-decoration none
-    color #5C5C5C
-}
-.hidden{
-    // display none
-}
-.show{
-    display block
-}
-body{
-    font-size 18px
-    color #5C5C5C
-    user-select none
-    overflow-x hidden
-}
-section{
-    display flex
+    width calc(100vw - 48px)
+    height 80vh
+    max-height 600px
+
+    &::before
+      content ''
+      display block
+      position absolute
+      bottom 0
+      width 100%
+      height 13px
+      background rgba(255, 255, 255, 0.4)
+      z-index 1
+
+
+.sliderArrow
+  background #fff
+  padding 0 20px
+  display flex
+  justify-content center
+  aign-items center
+  border 1px solid #F1F1F1
+  height 100%
+  position absolute
+  top 0
+  cursor pointer
+
+  &.prevArrow
+    left -12px
+    transform translateX(-100%)
+
+  &.nextArrow
+    right -12px
+    transform translate(100%)
+
+.slick-dots
+  bottom -40px !important
+  display flex !important
+  justify-content center
+  align-items center
+
+  & li button
+    display flex !important
     justify-content center
-    transform: translateZ(0px);
-    width 100%
-}
-.wrapper{
-    display flex
-    flex-direction column
     align-items center
-    overflow hidden
-    // perspective: 1px;
-    position relative
-}
-.conteiner{
-    max-width 1200px
-    width 100vw
-    position relative
-}
-.conteiner_head{
-    width 100%
-    display flex
-    align-items center
-    margin-left 26px
-}
-.conteiner_head:first-child{
-    margin-top 6.222222em
-}
-.dots{
-    display block
-    width 12px
-    height 12px
-    background #76B66B
-    border-radius 50%
-    margin-left 50px
-    position relative
-}
-.dots::before{
-    content ''
-    display block
-    width 12px
-    height 12px
-    background #1B8508
-    border-radius 50%
-    margin-left -18px
-}
-.dots::after{
-    position absolute
-    content ''
-    display inline-block
-    top 0
-    width 12px
-    height 12px
-    background #D1E7CE
-    border-radius 50%
-    margin-left 18px
-}
-@media all and (max-width 1280px) {
-    body{
-        font-size 16px
-    }
-    .conteiner{
-        padding 0 47px
-    }
-}
-@media all and (max-width 920px) {
-    body{
-        font-size 14px
-    }
-    .subP{
-        font-size 1em
-    }
-    .conteiner{
-        padding 0 35px
-    }
-    .conteiner_head{
-        justify-content space-between   
-    }
-    .dots{
-        margin-right 10%
-    }
-}
-@media all and (max-width 480px) {
-    .conteiner{
-        padding 0 20px
-    }
-}
+
+    &::before
+      content '' !important
+      display block
+      background #F1F1F1
+      border-radius 50%
+      width 8px !important
+      height 8px !important
+      opacity 1 !important
+      position unset !important
+  
+  & li.slick-active button:before
+    background #66B700
+
+.slick-dotted.slick-slider
+  margin-bottom 50px !important

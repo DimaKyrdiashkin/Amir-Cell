@@ -1,0 +1,78 @@
+.greenBanner
+  display flex
+  flex-direction column
+  align-items center
+  padding-bottom 132px
+
+  & .banner_box
+    background linear-gradient(92.64deg, #66B700 0%, #A2D906 100%)
+
+    &__item
+      z-index 1
+      position absolute
+      top 50%
+      left 20%
+      transform translateY(-50%)
+      max-width 350px
+      color #fff
+
+      &>h4
+        color #fff
+        margin-bottom 20px
+
+      &>a
+        display flex
+        width fit-content
+        border-radius 4px
+        background rgba(255, 255, 255, 0.12)
+        font-weight bold
+        padding 18px 52px
+        margin-top 44px
+
+  &_abstract
+    position absolute
+    height 100%
+    top 0
+    left 0
+    object-fit cover
+    z-index 0
+  
+  &_people
+    position absolute
+    height 90%
+    bottom 0
+    right 20%
+    object-fit cover
+    z-index 0
+
+  &_slider
+    margin-top 60px
+    display flex !important
+    max-width 1200px
+
+    & .slick-track
+      display flex
+      height 100%
+
+    &__items
+      padding 52px 64px 
+      max-width 600px
+      position relative
+      height 100%
+      background #FCFCFC
+      border-radius 4px
+      overflow hidden
+      margin-right 20px
+
+      &:focus
+        outline none
+
+      &::before
+        content ''
+        display block
+        position absolute
+        left 0
+        top 0
+        height 100%
+        width 12px
+        background linear-gradient(180deg, #66B700 0%, #A2D906 100%)

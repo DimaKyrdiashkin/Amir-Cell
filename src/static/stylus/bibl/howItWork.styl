@@ -1,0 +1,58 @@
+.howItWork
+  background #fff
+  padding-top 100px
+
+  & .container
+    &>p
+      color #5C5C5C
+      text-align center
+      margin-top 21px
+  
+  &_description
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    margin 80px 0
+
+    &__box
+      width calc(50% - 10px)
+      margin-bottom 20px
+      padding 55px 40px
+      background #FCFCFC
+      display flex
+      align-items center
+
+      &:nth-child(n+2)
+        margin-bottom 0
+
+      &>p
+        color #5C5C5C
+        margin-right 52px
+  
+  &_get
+    display flex
+    justify-content space-between
+    padding-top 80px
+
+    &__box
+      max-width 240px
+      flex-grow 1
+      position relative
+      height fit-content
+
+      &:nth-child(2n)
+        margin-top 60px
+
+      &::before
+        content ''
+        display block
+        background linear-gradient(90deg, #66B700 -0.21%, #A2D906 100%)
+        border-radius 4px
+        height 4px
+        width 100%
+        position absolute
+        bottom 0
+
+      &>p
+        margin 35px 0 24px
+        color #5C5C5C

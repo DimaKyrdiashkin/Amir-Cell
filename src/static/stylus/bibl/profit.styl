@@ -1,0 +1,43 @@
+.profit
+  padding-top 180px
+  background #fff
+
+  &_box
+    margin-top 80px
+    
+    &__items
+      display flex
+      flex-direction column
+      background #FCFCFC
+      border-radius 4px
+      margin-bottom 20px
+      padding 52px
+      position relative
+
+      &>p
+        max-width 512px
+        margin-bottom 28px
+
+      &>img
+        position absolute
+        right 100px
+        top 50%
+        transform translateY(-50%)
+
+      &-title
+        font-weight bold
+
+  &_button
+    display flex
+    align-items center
+    cursor pointer
+    width fit-content
+
+    &::after
+      content ''
+      display block
+      width 24px
+      height 24px
+      background url('../svg/Arrow.svg') center no-repeat
+      background-size contain
+      margin-left 12px

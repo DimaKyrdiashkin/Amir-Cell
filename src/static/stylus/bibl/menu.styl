@@ -1,96 +1,80 @@
-header{
+header
+  position absolute
+  top 40px
+  width 100%
+  display flex
+  align-items center
+  justify-content space-between
+
+  & .menu
     display flex
-    align-items center
-    justify-content space-between
-    padding-top 40px
-}
-.menu{
-    display flex
-}
-.menu li{
-    margin-right 80px
-}
-.menu a{
-    color #fff
-    z-index 2
-    position relative
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.menu li:last-child{
-    margin-right 0
-}
-.menu a::before{
-    content ''
-    display block
-    position absolute
-    width calc(100% + 36px)
-    height 0
-    background #645E9D
-    border-radius 4px
-    top 50%
-    left 50%
-    transform translate(-50%, -50%)
-    z-index -1
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.menu a:hover{
-    color #fff
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.menu a:hover::before{
-    height calc(100% + 12px)
-    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-.logoV{
+
+    & li
+      margin-right 24px
+      display flex
+      align-items center
+
+      & a
+        padding 12px 32px
+        border-radius 4px
+        font-weight bold
+
+        &.singUp
+          background #66B700
+
+      &:nth-child(2)
+        margin-right 66px
+
+      &:last-child
+        margin-right 0
+
+  & .logoV
     display none
-}
-.mobButton{
-    width 48px
-    height 48px
-    background #FFFFFF
-    box-shadow 0px 0px 12px rgba(0, 0, 0, 0.06)
-    border-radius 4px
-    padding 13px 8px
-    position fixed
-    top 36px
-    right 24px
-    display none
-    z-index 9999
-}
-.burger{
+
+
+.mobButton
+  width 48px
+  height 48px
+  box-shadow 0px 0px 12px rgba(0, 0, 0, 0.06)
+  border-radius 4px
+  padding 13px 8px
+  position relative
+  z-index 9999
+
+  & .burger
     display block
     border-radius 10px
-    background rgba(102, 183, 0, 0.6)
+    background #fff
     width 34px
-    height 4px
+    height 2px
     position absolute
     top 50%
     transform translateY(-50%) rotate(0)
     transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
-}
-.burger::before{
-    content ''
-    display block
-    width 34px
-    height 4px
-    border-radius 10px
-    background #66B700
-    position absolute
-    top -10px
-    transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
-}
-.burger::after{
-    content ''
-    display block
-    width 16px
-    height 4px
-    border-radius 10px
-    background #66B700
-    position absolute
-    top 10px
-    right 0
-    transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
-}
+
+    &::before
+      content ''
+      display block
+      width 100%
+      height 2px
+      border-radius 10px
+      background #fff
+      position absolute
+      top -10px
+      transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
+    &::after
+      content ''
+      display block
+      width 100%
+      height 2px
+      border-radius 10px
+      background #fff
+      position absolute
+      top 10px
+      right 0
+      transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+
 .open .burger{
     transform translateY(-50%) rotate(45deg)
     transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
@@ -143,330 +127,4 @@ header{
 }
 .mobMenu a{
     color #fff
-}
-#p1{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .2s
-}
-#p2{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .4s
-}
-#p3{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .6s
-}
-#p4{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .8s
-}
-#p5{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1s
-}
-#p6{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.2s
-}
-#p7{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.4s
-}
-#p8{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.6s
-}
-#p9{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.8s
-}
-#p10{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 2s
-}
-#p11{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .2s
-}
-#p12{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .4s
-}
-#p13{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .6s
-}
-#p14{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .8s
-}
-#p15{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1s
-}
-#p16{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.2s
-}
-#p17{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.4s
-}
-#p18{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.6s
-}
-#p19{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.8s
-}
-#p20{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 2s
-}
-#p21{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .2s
-}
-#p22{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .4s
-}
-#p23{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .6s
-}
-#p24{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .8s
-}
-#p25{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1s
-}
-#p26{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.2s
-}
-#p27{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.4s
-}
-#p28{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.6s
-}
-#p29{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.8s
-}
-#p30{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 2s
-}
-#p31{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .2s
-}
-#p32{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .4s
-}
-#p33{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .6s
-}
-#p34{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .8s
-}
-#p35{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1s
-}
-#p36{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.2s
-}
-#p37{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.4s
-}
-#p38{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.6s
-}
-#p39{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.8s
-}
-#p40{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 2s
-}
-#p41{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .2s
-}
-#p42{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .4s
-}
-#p43{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .6s
-}
-#p44{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .8s
-}
-#p45{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1s
-}
-#p46{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.2s
-}
-#p47{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.4s
-}
-#p48{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.6s
-}
-#p49{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.8s
-}
-#p50{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 2s
-}
-#p51{
-    animation dotsAnim 5s infinite .1s
-    animation-delay .2s
-}
-#p52{
-    animation dotsAnim 6s infinite .1s
-    animation-delay .4s
-}
-#p53{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .6s
-}
-#p54{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .8s
-}
-#p55{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1s
-}
-#p56{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 1.2s
-}
-#p57{
-    animation dotsAnim 3s infinite .1s
-    animation-delay 1.4s
-}
-#p58{
-    animation dotsAnim 4s infinite .1s
-    animation-delay 1.6s
-}
-#p59{
-    animation dotsAnim 5s infinite .1s
-    animation-delay 1.8s
-}
-#p60{
-    animation dotsAnim 6s infinite .1s
-    animation-delay 2s
-}
-#p61{
-    animation dotsAnim 3s infinite .1s
-    animation-delay .2s
-}
-#p62{
-    animation dotsAnim 4s infinite .1s
-    animation-delay .4s
-}
-@keyframes dotsAnim{
-    0%{
-        opacity 1
-    }
-    50%{
-        opacity 0
-    }
-    90%{
-        opacity 1
-    }
-    100%{
-        opacity 1
-    }
-}
-@media all and (max-width 1280px) {
-    .menu li{
-        margin-right 60px
-    }
-}
-@media all and (max-width 920px) {
-    .menu li{
-        margin-right 40px
-    }
-    .logoG{
-        display none
-    }
-    .logoV{
-        display block
-    }
-}
-@media all and (max-width 768px) {
-    .menu{
-        display none
-    }
-    .mobButton{
-        display block
-    }
-    .mobMenu{
-        display block
-    }
-}
-@media all and (max-width 480px) {
-    #p1, #p2, #p3, #p4, #p5,
-    #p6, #p7, #p8, #p9, #p10,
-    #p11, #p12, #p13, #p14, #p15,
-    #p16, #p17, #p18, #p19, #p20,
-    #p21, #p22, #p23, #p24, #p25,
-    #p26, #p27, #p28, #p29, #p30,
-    #p31, #p32, #p33, #p34, #p35,
-    #p36, #p37, #p38, #p39, #p40,
-    #p41, #p42, #p43, #p44, #p45,
-    #p46, #p47, #p48, #p49, #p50,
-    #p51, #p52, #p53, #p54, #p55,
-    #p56, #p57, #p58, #p59, #p60,
-    #p61, #p62{
-        animation none
-    }
-}
-@media all and (max-width 850px) and (orientation landscape) {
-    .mobMenu{
-        padding: 70px 29px 0 10%;
-    }
-    #p1, #p2, #p3, #p4, #p5,
-    #p6, #p7, #p8, #p9, #p10,
-    #p11, #p12, #p13, #p14, #p15,
-    #p16, #p17, #p18, #p19, #p20,
-    #p21, #p22, #p23, #p24, #p25,
-    #p26, #p27, #p28, #p29, #p30,
-    #p31, #p32, #p33, #p34, #p35,
-    #p36, #p37, #p38, #p39, #p40,
-    #p41, #p42, #p43, #p44, #p45,
-    #p46, #p47, #p48, #p49, #p50,
-    #p51, #p52, #p53, #p54, #p55,
-    #p56, #p57, #p58, #p59, #p60,
-    #p61, #p62{
-        animation none
-    }
 }
