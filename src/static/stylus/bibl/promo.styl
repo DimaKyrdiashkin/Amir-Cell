@@ -1,16 +1,3 @@
-.wrapper::before
-  content ''
-  position absolute
-  display block
-  width 100vw
-  min-height 120vh
-  margin-top -10vh
-  background url('../img/background.jpg') center no-repeat
-  background-size cover
-  position fixed
-  z-index -1
-  opacity 1
-
 .promo
   min-height 100vh
   width 100%
@@ -22,14 +9,13 @@
   &_main
     display flex
     flex-direction column
-    align-items center
     position relative
     margin-top 200px
+    max-width 465px
 
     &>p
-      max-width 60%
-      text-align center
-      margin 12px 0 66px
+      margin 12px 0 60px
+      color #5C5C5C
 
     &__button
       display flex
@@ -46,3 +32,22 @@
         border-radius 4px
         transition .4s
         background linear-gradient(91.7deg, #66B700 0%, #A2D906 100%)
+  
+  &_slider
+    position absolute
+    width 100%
+    height 80vh
+    max-height 500px
+    top 108px
+    border-top 1px solid #F1F1F1
+
+    & .people
+      position absolute
+      right 15%
+      bottom 0
+
+    & .abstraction
+      position absolute
+      z-index -1
+      right 0
+      bottom 0

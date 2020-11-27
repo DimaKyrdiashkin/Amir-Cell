@@ -1,4 +1,6 @@
 // Tariffs slider
+
+// Tariffs slider
 $("#tariffs_slider").slick({
   infinite: false,
   slidesToShow: 3,
