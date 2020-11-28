@@ -1,16 +1,19 @@
 .promo
-  min-height 100vh
   width 100%
   transition 1s
   background transparent
   position relative
   color #fff
+  display flex
+  flex-direction column
+  justify-content center
 
   &_main
     display flex
     flex-direction column
     position relative
-    margin-top 200px
+    margin-top 100px
+    margin-left calc(50vw - 500px)
     max-width 465px
 
     &>p
@@ -34,20 +37,50 @@
         background linear-gradient(91.7deg, #66B700 0%, #A2D906 100%)
   
   &_slider
-    position absolute
+    position relative
     width 100%
     height 80vh
     max-height 500px
-    top 108px
     border-top 1px solid #F1F1F1
 
     & .people
       position absolute
       right 15%
       bottom 0
+      height 85%
 
     & .abstraction
       position absolute
       z-index -1
       right 0
       bottom 0
+      height 90%
+
+  &_bottom
+    max-width 1200px
+    margin 60px auto 0
+
+    &__box
+      display flex
+      justify-content space-between
+
+      &-items
+        color #5C5C5C
+        width calc(25% - 75px)
+
+        &--title
+          font-weight bold
+          margin-top 40px
+          margin-bottom 25px
+
+@media all and (max-width 1440px)
+  .promo
+    padding 0
+
+    &_slider
+      & .people
+        right 10%
+
+    &_bottom
+      max-width 100%
+      padding 0 68px

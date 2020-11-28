@@ -29,7 +29,7 @@ $("#greenBanner_slider").slick({
       <img src="./static/svg/nextArrow.svg" alt="nextArrow" />
     </div>`,
   speed: 1000,
-  variableWidth: true,
+
 });
 
 const card = document.querySelectorAll(".cardT");
