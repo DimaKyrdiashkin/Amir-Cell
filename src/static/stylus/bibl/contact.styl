@@ -1,6 +1,7 @@
 .contact
-  padding 132px 0
-  background #fff
+  padding 80px 0
+  background #FCFCFC
+  margin-top 132px
 
   &_box
     display flex
@@ -17,17 +18,23 @@
       display flex
       flex-direction column
       justify-content flex-end
+      background #fff
 
       &-link
         display flex
-        margin-top 20px
+        flex-wrap wrap
 
         &>a
           color #645E9D
           margin-right 12px
           padding 9px 16px
+          margin-top 20px
           border-radius 4px
           background rgba(100, 94, 157, 0.08)
+          cursor pointer
+
+          &:last-child
+            margin-right 0
 
       &>img
         position absolute
@@ -37,17 +44,107 @@
       &:nth-child(1)
         width calc(41% - 20px)
       &:nth-child(2)
-        width calc(29% - 20px)
+        width calc(31% - 20px)
       &:nth-child(3)
-        width calc(30% - 20px)
+        width calc(28% - 20px)
+        margin-right 0
       &:nth-child(4)
-        width calc(32% - 20px)
+        width calc(33% - 20px)
       &:nth-child(5)
-        width calc(34% - 20px)
+        width calc(38% - 20px)
       &:nth-child(6)
-        width calc(34% - 20px)
+        width calc(29% - 20px)
+        margin-right 0
+  
+  &_soc-arrow
+    display flex
+    align-items center
 
+    &::after
+      content ''
+      display block
+      width 16px
+      height 16px
+      margin-left 8px
+      background url('../svg/ArrowRight.svg') center no-repeat
 
 @media all and (max-width 1440px)
   .contact
-    padding 132px 68px 0
+    padding 80px 68px 80px
+
+@media all and (max-width 1280px)
+  .contact
+    &_box
+      &__items
+        &>img
+          width 40px
+
+@media all and (max-width 1024px)
+  .contact
+    &_box
+      &__items
+        &:nth-child(1)
+          width calc(55% - 20px)
+        &:nth-child(2)
+          width calc(45% - 20px)
+          margin-right 0
+        &:nth-child(3)
+          width calc(40% - 20px)
+        &:nth-child(4)
+          width calc(60% - 20px)
+          margin-right 0
+        &:nth-child(5)
+          width calc(65% - 20px)
+        &:nth-child(6)
+          width calc(35% - 20px)
+          margin-right 0
+
+@media all and (max-width 768px)
+  .contact
+    padding 60px 28px
+    margin-top 92px
+
+@media all and (max-width 640px)
+  .contact
+    &_box
+      &__items
+        margin-right 10px
+
+        &:nth-child(1)
+          width 100%
+          margin-right 0
+          order 1
+        &:nth-child(2)
+          width calc(55% - 10px)
+          margin-right 0
+          order 2
+        &:nth-child(3)
+          width calc(45% - 10px)
+          order 3
+        &:nth-child(4)
+          width calc(60% - 10px)
+          order 4
+          margin-right 0
+        &:nth-child(5)
+          width 100%
+          margin-right 0
+          margin-bottom 0
+          order 6
+        &:nth-child(6)
+          width calc(40% - 10px)
+          margin-right 0
+          order 5
+
+@media all and (max-width 568px)
+  .contact 
+    padding 40px 12px
+    margin-top 92px
+
+    &_box
+      &__items
+        width 100% !important
+
+@media all and (orientation landscape) and (max-width 860px)
+  .contact
+    margin-top 92px
+    padding 60px 68px

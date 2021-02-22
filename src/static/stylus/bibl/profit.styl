@@ -13,6 +13,7 @@
       margin-bottom 20px
       padding 52px
       position relative
+      text-size-adjust 100%
 
       &>p
         max-width 512px
@@ -27,17 +28,144 @@
       &-title
         font-weight bold
 
+      &-description--open
+        overflow hidden
+        max-width 510px
+        transition 1s
+        height 0px
+
+        & p
+          margin-bottom 28px
+
+        & ul
+          margin-bottom 28px
+
+          & li
+            padding-left 24px
+            margin-bottom 16px
+            position relative
+
+            &:last-child
+              margin 0
+
+            &::before
+              content ''
+              display block
+              width 8px
+              height 8px
+              margin-right 16px
+              border-radius 50%
+              background #66B700
+              position absolute
+              left 0
+              transform translateY(50%)
+        &.open
+          height auto
+
   &_button
     display flex
     align-items center
     cursor pointer
     width fit-content
 
-    &::after
-      content ''
-      display block
+    & img
+      transition .4s
+
+    &.open img
+      transform rotate(180deg)
+      transition .4s
+
+    &>img
       width 24px
       height 24px
-      background url('../svg/Arrow.svg') center no-repeat
-      background-size contain
       margin-left 12px
+
+.soon
+
+  &_box
+    margin-top 40%
+    width 100%
+    // background rgba(255, 255, 255, 0.12)
+    // backdrop-filter blur(16px)
+    // z-index 99
+    text-align center
+
+    & p
+      margin-bottom 4px
+      padding-bottom 6px
+      position relative
+
+      &::before
+        content ''
+        display block
+        height 1px
+        width 60%
+        background #DCDCDC
+        position absolute
+        bottom 0
+        left 50%
+        transform translateX(-50%)
+    
+    & h5
+      color #1B8508
+
+@media all and (max-width 920px)
+  .profit_box__items
+    &>p
+      max-width 65%
+
+    &-description--open
+      max-width 65%
+
+@media all and (max-width 768px)
+  .profit
+    padding-top 92px
+
+    &_box
+      margin-top 60px
+
+@media all and (max-width 560px)
+  .profit
+    padding-top 60px
+
+    &_box
+      margin-top 36px
+
+      &__items
+        padding 20px
+        
+        &-description
+          font-size 14px
+
+          &--open
+            max-width 100%
+
+            & .subP
+              font-size 14px
+
+        &-title
+          font-size 18px
+
+        &>img
+          display none
+
+        &>p
+          max-width 100%
+
+    &_button
+      font-size 14px
+
+@media all and (orientation landscape) and (max-width 860px)
+  .profit
+    padding-top 92px
+
+    &_box
+      margin-top 40px
+
+      &__items
+        &>img
+          display none
+
+        &-description--open
+        &>p
+          max-width 100%

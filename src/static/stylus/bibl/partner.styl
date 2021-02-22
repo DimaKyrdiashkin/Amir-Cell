@@ -12,6 +12,7 @@
 
     &__left
       width 45%
+      min-width 500px
       padding 68px 68px 55px 68px
 
       &>ul
@@ -54,9 +55,65 @@
         display block
         width fit-content
         margin-top 52px
+        font-weight bold
+        letter-spacing .5px
 
     &__right
-      width auto
       display flex
-      justify-content flex-end
+      position relative
+      height auto
+      width 50% 
+      overflow hidden     
       background linear-gradient(72.39deg, #645E9D 32.15%, #9E7AC1 100%)
+
+      &>img
+        position absolute
+        top 0
+        left 50%
+        transform translateX(-50%)
+        height 100%
+
+@media all and (max-width 1024px)
+  .partner
+    &_box
+      flex-direction column
+
+      &__left
+        width 100%
+
+      &__right
+        height 400px
+        width 100%
+
+@media all and (max-width 768px)
+  .partner
+    padding-top 92px
+
+@media all and (max-width 560px)
+  .partner
+    &_box
+      &__left
+        padding 68px 12px 55px
+        min-width unset
+
+        &>a
+          padding 18px 0
+          width 100%
+          max-width 300px
+          display flex
+          justify-content center
+          margin 52px auto 0
+
+        &>ul
+          margin 0 auto
+          width fit-content
+
+          &>li
+            max-width 80vw
+
+@media all and (orientation landscape) and (max-width 860px)
+  .partner
+    padding-top 92px
+
+    &_box
+      margin-top 60px

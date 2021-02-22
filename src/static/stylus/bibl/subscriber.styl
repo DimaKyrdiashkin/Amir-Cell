@@ -5,13 +5,13 @@
   &_box
     display flex
     justify-content space-between
-    margin 100px 0
+    margin 100px 0 0
 
     &__items
       &-imgWrapp
         border-radius 50%
         padding 70px
-        width fit-content
+        width auto
         margin 0 auto
         position relative
         background #fff
@@ -23,23 +23,9 @@
         top 12px
       
       &-text
-        margin-top 56px
+        margin-top 32px
         max-width 240px
         text-align center
-  &_qr
-    display flex
-    width fit-content
-    align-items center
-    padding 24px
-    margin 0 auto
-    border-radius 4px
-    border 1px solid #F1F1F1
-
-    &>img
-      margin-right 40px
-
-    &>p
-      color #9A9A9A
 
   &_contact
     margin-top 80px
@@ -48,6 +34,7 @@
       text-align center
 
     &__backCall
+      display none
       margin-top 60px
       width 100%
       height 100px
@@ -71,8 +58,89 @@
 
         &:first-child
           margin-bottom 24px
+          display flex
+          flex-wrap wrap
 
 
 @media all and (max-width 1440px)
- .subscriber
-  padding 132px 68px 0
+  .subscriber
+    padding 100px 68px
+
+@media all and (max-width 1280px)
+  .subscriber
+    &_box
+      flex-wrap wrap
+      padding 0 10%
+
+      &__items
+        width calc(50% - 40px)
+        display flex
+        flex-direction column
+        align-items center
+        margin-bottom 80px
+
+        &-imgWrapp
+          width fit-content
+
+@media all and (max-width 920px)
+  .subscriber_box__items-imgWrapp
+    padding 60px
+
+    &>img:not(.subscriber_box__items-num)
+      width 70px
+
+@media all and (max-width 768px)
+  .subscriber
+    padding 92px 28px 60px
+    
+    &_box
+      padding 0
+      margin-top 60px
+
+@media all and (max-width 568px)
+  .subscriber
+    padding 60px 12px
+
+    &_box
+      flex-direction column
+      align-items center
+
+      &__items
+        width 100%        
+
+        &-imgWrapp
+          padding 48px
+          width 150px
+          height 150px
+
+          &>img
+            width 36px
+
+            &:not(.subscriber_box__items-num)
+              width 50px
+        
+        &:last-child
+          margin-bottom 0
+
+    &_contact
+      &__list
+        padding 28px 14px
+
+        &>p
+          flex-wrap wrap
+          position relative
+          padding-left 24px
+          
+          &>.greenMark
+            position absolute
+            left 0
+
+@media all and (orientation landscape) and (max-width 860px)
+  .subscriber
+    padding 60px 68px
+
+    &_box
+      margin-top 80px
+
+    &_contact
+      margin-top 40px

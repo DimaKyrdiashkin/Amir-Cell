@@ -136,3 +136,36 @@ header
 .mobMenu a{
     color #fff
 }
+
+
+@media all and (max-width 1280px)
+  header
+    padding 0 68px
+
+@media all and (max-width 768px)
+  header
+    padding 0 28px
+
+@media all and (max-width 560px)
+  .singIn
+  .singUp
+    font-size 12px
+
+  header
+    padding 0 12px
+    & .menu
+      & li
+        margin-right 12px
+        
+        & a
+          padding 12px 20px
+
+    & .logoG
+      display none
+    
+    & .logoV
+      display block
+
+@media all and (orientation landscape) and (max-width 860px)
+  header
+    margin 18px auto

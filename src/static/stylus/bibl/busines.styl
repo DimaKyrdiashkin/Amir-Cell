@@ -42,8 +42,48 @@
       &>h4
         margin-bottom 20px
         color #645E9D
+        width 100%
 
 
 @media all and (max-width 1440px)
   .busines
     padding 100px 68px 0
+
+@media all and (max-width 1280px)
+  .busines
+    &_box
+      flex-wrap wrap
+      justify-content center
+      padding 0 10%
+
+      &__items
+        width calc(50% - 50px)
+        margin-right 100px
+        margin-bottom 100px
+
+        &:nth-child(2n)
+          margin-right 0
+
+@media all and (max-width 768px)
+  .busines
+    padding 92px 28px 0
+
+    &_box
+      padding 0 5%
+
+      &__items
+        &>h4
+          font-size 30px
+          
+        & .subP
+          font-size 14px
+
+@media all and (max-width 560px)
+  .busines
+    &_box
+      flex-direction column
+
+      &__items
+        width 100%
+        margin-right 0
+        margin-bottom 40px

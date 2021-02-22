@@ -1,0 +1,65 @@
+.list
+  display flex
+  flex-wrap wrap
+  margin-bottom 100px
+
+  &_box
+    margin-top 28px
+    width 50%
+    padding-bottom 20px
+    border-bottom 1px solid #e2e2e2
+
+  & ul
+    & li
+      width fit-content
+      color #5C5C5C
+      margin 10px 0
+      font-size .888888em
+      cursor pointer
+      font-weight 300
+
+      &>span
+        color #6ebb0e
+        font-size 0.9em
+        font-weight 500
+        margin-left 8px
+
+.modal-list
+  & .modal_box
+    max-height 90%
+
+@media all and (max-width 1440px)
+  .distibutor_promo
+    max-width 1200px
+  .modal_box
+    & .container
+      max-width 1200px    
+
+@media all and (max-width 1280px)
+  .distibutor_promo
+    & .container
+      padding 0 68px
+
+  .modal_box
+    & .container
+      padding 0 68px
+
+@media all and (max-width 768px)
+  .list_box
+    width 100%
+    max-width 400px
+
+  .modal_box__content
+    & .distibutor
+      width 100%
+@media all and (max-width 560px)
+  .distibutor_promo
+    & .container
+      padding 0 20px
+
+      &>h4
+        font-size 18px
+
+  .modal_box
+    & .container
+      padding 0 20px

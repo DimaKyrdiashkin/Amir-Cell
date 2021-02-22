@@ -64,6 +64,9 @@
       overflow hidden
       margin 0 10px
 
+      &>p
+        text-size-adjust 100%
+
       &:focus
         outline none
 
@@ -82,3 +85,53 @@
   .greenBanner
     &_slider
       max-width 90%
+
+@media all and (max-width 1280px)
+  .greenBanner
+    & .banner
+      &_box
+        &__item
+          left 15%
+
+    &_people
+      right 15%
+
+@media all and (max-width 1024px)
+   .greenBanner
+    & .banner
+      &_box
+        &__item
+          left 10%
+
+    &_abstract
+      display none
+
+    &_people
+      right 5%
+
+    &_slider
+      &__items
+        max-width 100%
+
+@media all and (max-width 768px)
+  .greenBanner
+    padding-top 92px
+    padding-bottom 92px
+
+@media all and (max-width 640px)
+  .greenBanner
+    &_people
+      display none
+
+@media all and (max-width 560px)
+  .greenBanner
+    padding-top 60px
+    padding-bottom 20px
+
+    &_slider__items
+      padding 36px
+
+@media all and (orientation landscape) and (max-width 860px)
+  .greenBanner
+    padding-top 60px
+    padding-bottom 60px

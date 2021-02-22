@@ -6,7 +6,7 @@ body::-webkit-scrollbar-track
   padding 0 6px
 
 body::-webkit-scrollbar-thumb
-  background url('../img/scroll.png') center no-repeat
+  // background url('../img/scroll.png') center no-repeat
   background-size contain
 
 *
@@ -34,9 +34,11 @@ h4
   font-size 1.888888em
   line-height 130%
   color #0F0F0F
+  max-width 740px
+  margin 0 auto
 
 h5
-  font-size 1.666666em
+  font-size 1.333333em
   line-height 140%
   color #0F0F0F
 
@@ -53,8 +55,8 @@ p
   line-height 150%
   color #9A9A9A
 
-.gray
-  color #B5B2D0
+.purpleText
+  color #645E9D
 
 .greenText
   color #66B700
@@ -78,6 +80,14 @@ a
   outline none
   text-decoration none
   color #fff
+  
+h4.distibutor
+  max-width 100%
+  margin 20px 0
+  text-align left !important
+
+.letter
+  font-weight 300
 
 .hidden
   display none
@@ -86,6 +96,7 @@ a
   display block
 
 body
+  text-size-adjust 100%
   font-size 18px
   color #5C5C5C
   overflow-x hidden
@@ -99,11 +110,13 @@ section
   display flex
   flex-direction column
   align-items center
+  position relative
 
 .container
   max-width 1200px
   width 100vw
   position relative
+  margin 0 auto
 
   &>h4
     text-align center
@@ -175,7 +188,7 @@ section
     background #66B700
 
 .slick-dotted.slick-slider
-  margin-bottom 50px !important
+  margin-bottom 80px !important
 
 @media all and (max-width 1440px)
   .container
@@ -187,3 +200,61 @@ section
 @media all and (max-width 1280px)
   body
     font-size 16px
+
+@media all and (max-width 1024px)
+  .sliderArrow
+    display none !important
+
+@media all and (max-width 920px)
+  .banner_box
+    height 50vh
+    min-height 400px
+
+@media all and (max-width 768px)
+  section
+    padding  0 28px
+
+  .banner
+    padding-top 92px
+
+    &_box
+      height 40vh
+      min-height 350px
+
+@media all and (max-width 640px)
+  .banner_box
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+    &__item
+      position unset !important
+      left unset !important
+      right unset !important
+      top unset !important
+      bottom unset !important
+      transform unset !important
+      text-align center
+      
+      &>a
+        display flex
+        margin 36px auto 0
+
+@media all and (max-width 560px)
+  body
+    font-size 14px
+  h1
+    font-size 60px
+  h4
+    font-size 24px
+  h5
+    font-size 20px
+
+  section
+    padding 0 12px
+
+  .banner
+    &_box
+      &__item
+        max-width 90% !important

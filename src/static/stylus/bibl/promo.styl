@@ -28,7 +28,7 @@
 
       &>a
         text-align center
-        letter-spacing 1px
+        letter-spacing .5px
         color #fff
         font-weight bold
         padding 20px 60px
@@ -42,6 +42,8 @@
     height 80vh
     max-height 500px
     border-top 1px solid #F1F1F1
+    box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
+    overflow hidden
 
     & .people
       position absolute
@@ -73,6 +75,68 @@
           margin-top 40px
           margin-bottom 25px
 
+        &--img
+          display flex
+          justify-content center
+          align-items center
+          position relative
+          transform translateX(-11px)
+          width 58px
+          height 58px
+          border-radius 50%
+          transition 1s
+          // background #66B700
+
+          & svg>path
+            transition 1s
+            // fill #fff
+          
+
+        // &:nth-child(1) svg>path
+        //   animation paintingSvg 8s infinite 0s
+
+        // &:nth-child(2) svg>path
+        //   animation paintingSvg 8s infinite 2s
+
+        // &:nth-child(3) svg>path
+        //   animation paintingSvg 8s infinite 4s
+
+        // &:nth-child(4) svg>path
+        //   animation paintingSvg 8s infinite 6s
+
+
+        // &:nth-child(1) .promo_bottom__box-items--img
+        //   animation paingSvgWrap 8s ease infinite 0s
+
+        // &:nth-child(2) .promo_bottom__box-items--img
+        //   animation paingSvgWrap 8s ease infinite 2s
+
+        // &:nth-child(3) .promo_bottom__box-items--img
+        //   animation paingSvgWrap 8s ease infinite 4s
+
+        // &:nth-child(4) .promo_bottom__box-items--img
+        //   animation paingSvgWrap 8s ease infinite 6s
+
+@keyframes paintingSvg
+  0%
+    fill #5C5C5C
+  25%
+    fill #fff
+  75%
+    fill #5C5C5C
+  100%
+    fill #5C5C5C
+
+@keyframes paingSvgWrap
+  0%
+    background transparent
+  25%
+    background #66B700
+  75%
+    background transparent
+  100%
+    background transparent
+
 @media all and (max-width 1440px)
   .promo
     padding 0
@@ -84,3 +148,126 @@
     &_bottom
       max-width 100%
       padding 0 68px
+
+@media all and (max-width 1280px)
+  .promo_main
+    margin-left 10%
+    max-width 350px
+
+  .promo_slider
+    & .abstraction
+      right -30%
+
+    & .people
+      right 0
+
+@media all and (max-width 1024px)
+  .promo
+    &_bottom
+      &__box
+        flex-wrap wrap
+
+        &-items
+          width 40%
+          margin-right 10%
+          margin-bottom 72px
+
+          &:nth-child(2n)
+            margin-right 0
+          
+          &:nth-child(n+2)
+            margin-bottom 0
+
+@media all and (max-width 768px)
+  .promo
+    &_main
+      margin-left 0
+      text-align center
+      
+      &__button
+        margin 0 auto
+
+      &>p
+        margin 12px 0 35px
+
+    &_slider
+      height fit-content
+      max-height unset
+      display flex
+      flex-direction column
+      align-items center
+
+      & .people
+        position unset
+        width fit-content
+        height 40vh
+        object-fit contain
+        margin-top 80px
+        min-height 300px
+
+      & .abstraction
+        height 50vh
+        right 50%
+        transform translateX(50%)
+        min-height 375px
+
+@media all and (max-width 560px)
+  .promo
+    &_bottom
+      padding 0 28px
+
+      &__box
+        flex-direction column
+        
+        &-items
+          width 100%
+          margin-bottom 48px
+          margin-right 0
+          max-width 350px
+
+          &:nth-child(n+2)
+            margin-bottom 48px
+
+          &:last-child
+            margin-bottom 0
+
+          &--title
+            margin-top 20px
+            margin-bottom 16px
+            font-size 18px
+          
+          & .subP
+            font-size 14px
+
+    &_main
+      &__button
+        &>a
+          padding 14px 40px
+
+    &_slider
+      & .abstraction
+        height 40vh
+        max-height 400px
+        min-height 350px
+    &_link
+      font-size 12px
+
+@media all and (orientation landscape) and (max-width 860px)
+  .promo
+    &_main
+      margin-top 50px
+
+      &>p
+        margin 12px 0 40px
+    
+    &_slider
+      min-height 400px
+  
+    &_bottom
+      &__box
+        &-items
+          margin-bottom 40px
+
+          &--title
+            margin-top 12px
+            margin-bottom 8px

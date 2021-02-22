@@ -1,6 +1,6 @@
 .tariffs
   background #fff
-  padding-top 180px
+  padding-top 132px
 
   &_box
     display flex
@@ -8,8 +8,7 @@
     position relative
 
     & .card
-      width 366px
-      height 515px
+      height 535px
       display flex
       flex-direction column
       border-radius 18px
@@ -18,6 +17,17 @@
       border 1px solid #F5F5F5
       transition 1s
       margin 0 10px
+
+      &_small
+        font-size 12px
+        width 100%
+        color #1b8508
+        display flex
+        justify-content center
+        align-items center
+        border-radius 3px
+        box-shadow 0 0 12px rgba(0,0,0,.03)
+        border 1px dashed #f5f5f5
 
       &:focus
         outline none
@@ -64,13 +74,14 @@
         padding 0 24px
         display flex
         justify-content space-between
+        min-height 175px
+        flex-wrap wrap
 
         & .card_column
           text-align center
-          margin-bottom 30px
           display flex
           flex-direction column
-          width 92px
+          width 30%
 
           &__top
             color #5C5C5C
@@ -89,43 +100,50 @@
             border 1px dashed #F5F5F5
             box-shadow 0px 0px 12px rgba(0, 0, 0, 0.03)
             border-radius 3px
-            padding 28px 0
+            padding 24px 0
             white-space nowrap
             color #1B8508
             align-self center
             width 100%
             transition .5s
 
-
-            &.open
-              transform translateY(-170px)
       &_bottom
-        height 170px
         padding 0 24px
         margin-bottom 70px
         display flex
         flex-direction column
         position relative
         background #fff
+        transition 1s
+  &_link
+    background linear-gradient(91.7deg, #66B700 0%, #A2D906 100%)
+    padding 18px 52px
+    border-radius 4px
+    display flex
+    margin 0 auto
+    width fit-content
+    font-weight bold
+    letter-spacing .5px
 
-        & .soon
-          width 100%
-          margin 0
+#card_bottom.open
+  transform translateY(-190px)
+  transition 1s
 
 .cardT
   transition .3s linear
-
+  
 .price
-  position relative
-  margin-bottom 24px
+  display flex
+  flex-direction column
+  margin-bottom 18px
+  margin-top 5px
 
-  &::after
-    content ''
-    display block
-    position absolute
-    width 100%
-    height 2px
-    background #85C533
+  &>h5
+    color #1B8508
+    margin-bottom 4px
+
+  &>p
+    color #9A9A9A
 
 .card_button
   margin-top 23px
@@ -147,3 +165,41 @@
   .tariffs
     & .container
       max-width 90%
+
+@media all and (max-width 768px)
+  .tariffs
+    padding-top 92px
+    
+    &_box
+      max-width 400px
+      margin 80px auto 0
+
+@media all and (max-width 560px)
+  .tariffs
+    padding-top 60px
+
+    &_box
+      margin 36px auto 0
+
+      & .card
+        &_content
+        &_bottom
+          padding 0 12px
+
+.cardT
+  font-size 12px
+
+@media all and (max-width 375px)
+  .tariffs
+    &_link
+      padding 18px 26px
+
+@media all and (orientation landscape) and (max-width 860px)
+  .tariffs
+    padding-top 92px
+
+    &_box
+      margin-top 60px
+
+    & .container
+      max-width 95%

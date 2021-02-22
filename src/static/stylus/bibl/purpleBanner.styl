@@ -5,6 +5,7 @@
   padding-bottom 132px
 
   & .banner_box
+    overflow hidden
     background linear-gradient(98.59deg, #9E7AC1 0%, #645E9D 100%)
 
     &__item
@@ -95,6 +96,9 @@
           border-radius 50%
           border 10px solid rgba(100, 94, 157, 0.2)
 
+      &-description
+        color #9A9A9A
+
       &-title
         font-weight bold
         margin 100px 0 20px
@@ -104,3 +108,55 @@
   .purpleBanner
     &_people
       left 0
+
+@media all and (max-width 1280px)
+  .purpleBanner
+    &_bottom
+      &__items
+        width calc(50% - 20px)
+        margin-right 0
+        margin-bottom 20px
+
+        &:last-child
+          width 100%
+
+@media all and (max-width 1024px)
+  .purpleBanner
+    & .banner
+      &_box
+        &__item
+          right 5%
+
+    &_abstract
+      display none
+
+    &_people
+      left -20%
+
+@media all and (max-width 768px)
+  .purpleBanner
+    padding-bottom 92px
+    
+    &_bottom
+      margin-top 60px
+      flex-direction column
+      flex-wrap no-wrap
+
+      &__items
+        width 100%
+        max-width 600px
+
+    &_people
+      height 70%
+
+@media all and (max-width 640px)
+  .purpleBanner
+    padding-bottom 60px
+
+    &_people
+      display none
+
+@media all and (orientation landscape) and (max-width 860px)
+  .purpleBanner
+    padding-top 92px
+    padding-bottom 92px

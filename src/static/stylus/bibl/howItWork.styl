@@ -15,19 +15,29 @@
     margin 80px 0
 
     &__box
+      position relative
       width calc(50% - 10px)
       margin-bottom 20px
       padding 55px 40px
       background #FCFCFC
       display flex
-      align-items center
 
-      &:nth-child(n+2)
+      &>.num
+        position absolute
+        left 56px
+        top 56px
+
+      &>.icon
+        height fit-content
+
+      &:nth-child(n+3)
         margin-bottom 0
 
       &>p
         color #5C5C5C
+        margin-top 120px
         margin-right 52px
+        text-size-adjust 100%
   
   &_get
     display flex
@@ -35,24 +45,90 @@
     padding-top 80px
 
     &__box
-      max-width 240px
+      max-width calc(25% - 20px)
       flex-grow 1
       position relative
-      height fit-content
-
-      &:nth-child(2n)
-        margin-top 60px
+      border 1px solid #F1F1F1
+      box-shadow 0px 15px 40px rgba(0, 0, 0, 0.04)
+      border-radius 4px
+      padding 32px
+      overflow hidden
 
       &::before
         content ''
         display block
-        background linear-gradient(90deg, #66B700 -0.21%, #A2D906 100%)
-        border-radius 4px
-        height 4px
-        width 100%
+        background linear-gradient(180deg, #66B700 0%, #A2D906 100%)
+        height 100%
+        width 6px
         position absolute
-        bottom 0
+        left 0
+        top 0
 
       &>p
-        margin 35px 0 24px
         color #5C5C5C
+
+@media all and (max-width 1024px)
+  .howItWork
+    &_description
+      flex-direction column
+
+      &__box
+        width 100%
+
+    &_get
+      flex-wrap wrap
+
+      &__box
+        max-width calc(50% - 20px)
+        margin-bottom 20px
+
+@media all and (max-width 768px)
+  .howItWork
+    padding-top 92px
+
+    &_description
+      margin 60px 0 72px
+
+    &_get
+      padding-top 40px
+
+@media all and (max-width 560px)
+  .howItWork
+    &_description
+      margin 32px 0
+      
+      &__box
+        padding 28px 24px 24px
+        
+        &:nth-child(n+3)
+          margin-bottom 20px
+        
+        & .num
+          left 24px
+          top 24px
+          width 32px
+
+        &>img:not(.num)
+          display none
+
+        &>p
+          margin-right 0
+          margin-top 60px
+
+    &_get
+      &__box
+        padding 24px
+        max-width 100%
+
+@media all and (orientation landscape) and (max-width 860px)
+  .howItWork
+    padding-top 92px
+
+    &_description
+      &__box
+        &>p
+          margin-top 80px
+
+        &>.icon
+          width 80px
+          height 80px  

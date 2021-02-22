@@ -1,46 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Amir Cell</title>
+  <title>AmirCell</title>
   <link rel="stylesheet" href="static/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="logo.ico">
 </head>
 <body>
   <div class="wrapper">
-    <div class="mobMenu">
-      <ul>
-          <li class="mobItems"><a href="#tariffs" class="subP">Пакеты услуг</a></li>
-          <li class="mobItems"><a href="#advantage" class="subP">Преимущества</a></li>
-          <li class="mobItems"><a href="#russia" class="subP">Россия</a></li>
-          <li class="mobItems"><a href="#world" class="subP">Весь мир</a></li>
-          <li class="mobItems"><a href="#howto" class="subP">Как заказать?</a></li>
-      </ul>
-      <!-- <img class="mobMenu_svg" src="static/svg/mobMenu.svg" alt="mobMenu"> -->
-    </div>
     <section class="promo" >       
       <header>
-        <img src="static/svg/LogoGorizontal.svg" alt="logo" class="logoG">
-        <img src="static/svg/LogoVertical.svg" alt="logo" class="logoV">
+        <a href="/">
+          <img src="static/svg/LogoGorizontal.svg" alt="logo" class="logoG">
+          <img src="static/svg/LogoVertical.svg" alt="logo" class="logoV">
+        </a>
         <ul class="menu">
-          <li><a href="https://account.amir.capital/front/auth/sign-in" target="_blanck" class="singIn subP">Войти</a></li>
-          <li><a href="https://account.amir.capital/front/auth/sign-up" target="_blanck" class="singUp subP">Зарегистрироваться</a></li>
-          <li>
+          <li><a target="_blanck" href="https://account.amir.capital/front/auth/sign-in" target="_blanck" class="singIn subP">Вход</a></li>
+          <li><a target="_blanck" href="https://account.amir.capital/front/auth/sign-up" target="_blanck" class="singUp subP">Регистрация</a></li>
+          <!-- <li>
             <div class="mobButton">
               <span class="burger"></span>
             </div>
-          </li>
+          </li> -->
         </ul>
       </header>
       <div class="promo_slider">
         <div class="promo_main">
-          <h1>Amir Cell</h1>
+          <h1>AmirCell</h1>
           <p>Первая доходная мобильная связь для инвесторов и тех, кто стремится к финансовой независимости</p>
           <div class="promo_main__button">
-              <a href="https://account.amir.capital/front/auth/sign-in" target="_blanck" class="promo_link">Как заказать <nobr>sim-карту</nobr></a>
+              <a href="#howItWork" class="promo_link">Как заказать <nobr>sim-карту</nobr></a>
           </div>
         </div>
         <img src="static/img/Promo/People.png" alt="" class="people">
@@ -49,66 +41,89 @@
       <div class="promo_bottom">
         <div class="promo_bottom__box">
           <div class="promo_bottom__box-items">
-            <img src="static/svg/Promo/Safebox.svg" alt="">
+            <div class="promo_bottom__box-items--img promoAnimation">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.90912 4.90912V31.0909H9.34438L9.76073 29.5505H26.2393L26.6557 31.0909H31.0909V4.90912H4.90912ZM7.99008 23.3949H6.44321V21.522H7.99008V23.3949ZM7.99008 19.988H6.44321V14.7081H7.99008V19.988ZM7.99008 13.174H6.44321V11.3012H7.99008V13.174ZM29.5568 29.5568H27.8302L27.4138 28.0164H8.58623L8.16988 29.5568H6.44321V24.929H7.99008V26.4695H28.01V7.99008H7.99008V9.76707H6.44321V6.44321H29.5568V29.5568ZM9.52418 24.9354V9.52418H26.4759V24.9354H9.52418Z" fill="#5C5C5C"/>
+                <path d="M18 11.6265C14.8878 11.6265 12.3558 14.1585 12.3558 17.2707C12.3558 20.3829 14.8878 22.9149 18 22.9149C21.1122 22.9149 23.6442 20.3829 23.6442 17.2707C23.6442 14.1585 21.1122 11.6265 18 11.6265ZM18 16.2544C18.5604 16.2544 19.0163 16.7103 19.0163 17.2707C19.0163 17.8311 18.5604 18.287 18 18.287C17.4396 18.287 16.9837 17.8311 16.9837 17.2707C16.9837 16.7103 17.4396 16.2544 18 16.2544ZM18 21.3808C15.7337 21.3808 13.8899 19.537 13.8899 17.2707C13.8899 15.2666 15.3321 13.5939 17.233 13.2335V14.8383C16.2004 15.1647 15.4496 16.1316 15.4496 17.2707C15.4496 18.677 16.5937 19.8211 18 19.8211C19.4063 19.8211 20.5504 18.677 20.5504 17.2707C20.5504 16.1316 19.7997 15.1647 18.7671 14.8383V13.2335C20.6679 13.5939 22.1101 15.2666 22.1101 17.2707C22.1101 19.537 20.2663 21.3808 18 21.3808Z" fill="#5C5C5C"/>
+                <path d="M11.0839 21.9433H12.618V23.4689H11.0839V21.9433Z" fill="#5C5C5C"/>
+                <path d="M23.3821 21.9433H24.9162V23.4689H23.3821V21.9433Z" fill="#5C5C5C"/>
+              </svg>
+            </div>
             <p class="promo_bottom__box-items--title">Возвратный депозит</p>
             <p class="subP">Выбирай любой пакет связи и интернета, размести возвратный депозит и пользуйся без оплаты!</p>
           </div>
           <div class="promo_bottom__box-items">
-            <img src="static/svg/Promo/Payment.svg" alt="">
+            <div class="promo_bottom__box-items--img promoAnimation">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M31.6565 18.1283C30.509 17.7399 29.292 18.1107 28.556 19.0731L25.1637 23.5092C25.1643 23.485 25.1655 23.461 25.1655 23.4367C25.1655 21.7626 23.8035 20.4005 22.1293 20.4005H16.1036C14.1824 18.7661 11.4672 18.4753 9.25573 19.62V19.4897C9.25573 18.9866 8.8479 18.5788 8.34486 18.5788H3.36546C2.86242 18.5788 2.45459 18.9866 2.45459 19.4897V31.6345C2.45459 32.1376 2.86242 32.5454 3.36546 32.5454H8.34486C8.8479 32.5454 9.25573 32.1376 9.25573 31.6345V30.7237H24.1857C26.3654 30.7237 28.3704 29.6291 29.5491 27.7955L33.1038 22.2659C33.3928 21.8165 33.5454 21.2965 33.5454 20.7621C33.5455 19.5507 32.804 18.5168 31.6565 18.1283ZM7.43399 30.7237H4.27632V20.4005H7.43399V30.7237ZM31.5714 21.2808L28.0167 26.8104C27.1748 28.1201 25.7427 28.9019 24.1857 28.9019H9.25573V21.7801L9.56038 21.5625C11.2692 20.3419 13.6081 20.5124 15.122 21.968C15.2916 22.1312 15.5179 22.2223 15.7532 22.2223H22.1293C22.799 22.2223 23.3438 22.7671 23.3438 23.4368C23.3438 24.1065 22.799 24.6513 22.1293 24.6513H15.7532H15.6318C15.1288 24.6513 14.7209 25.0591 14.7209 25.5622C14.7209 26.0652 15.1288 26.473 15.6318 26.473H15.7532H22.1293H22.94C24.3493 26.473 25.7017 25.8047 26.5577 24.6852L30.0031 20.1798C30.3908 19.6729 30.9194 19.8023 31.0723 19.854C31.2252 19.9058 31.7238 20.1242 31.7238 20.7623C31.7238 20.9465 31.6711 21.1258 31.5714 21.2808Z" fill="#5C5C5C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4898 3.2045C17.2709 3.2045 14.6493 5.82613 14.6493 9.04506C14.6493 12.264 17.2709 14.8856 20.4898 14.8856C23.7088 14.8856 26.3304 12.264 26.3304 9.04506C26.3304 5.82612 23.7088 3.2045 20.4898 3.2045ZM20.4898 1.3045C16.2215 1.3045 12.7493 4.77678 12.7493 9.04506C12.7493 13.3133 16.2215 16.7856 20.4898 16.7856C24.7581 16.7856 28.2304 13.3133 28.2304 9.04506C28.2304 4.77678 24.7581 1.3045 20.4898 1.3045Z" fill="#5C5C5C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0953 7.18548V7.96608V7.96661C22.5294 8.03322 23.6077 8.31996 23.6077 8.66291C23.6077 9.00585 22.5294 9.29259 21.0953 9.35921V11.8571H19.8171V9.36181C18.3809 9.29468 17.3 9.00793 17.3 8.66447C17.3 8.321 18.3804 8.03426 19.8171 7.96765V7.18704H18.0494V6H22.863V7.18548H21.0953ZM21.0462 9.15025C21.071 9.14916 21.087 9.14845 21.0953 9.14845V9.14741C22.3621 9.09069 23.3077 8.86743 23.3077 8.60203C23.3077 8.33662 22.3621 8.11337 21.0953 8.05665V8.92624C21.0586 8.92936 20.8603 8.94602 20.4662 8.94602C20.1378 8.94602 19.9002 8.93196 19.8171 8.92624V8.05665C18.5477 8.11337 17.6001 8.3361 17.6001 8.60255C17.6001 8.869 18.5477 9.09173 19.8171 9.14845C20.0316 9.15807 20.2463 9.16258 20.4611 9.16198C20.7795 9.16198 20.9626 9.15393 21.0462 9.15025Z" fill="#5C5C5C"/>
+              </svg>
+            </div>
             <p class="promo_bottom__box-items--title">+6% годовых</p>
             <p class="subP">Получай инвестиционный доход 6% годовых на сумму своего депозита</p>
           </div>
           <div class="promo_bottom__box-items">
-            <img src="static/svg/Promo/MoneySecurity.svg" alt="">
+            <div class="promo_bottom__box-items--img promoAnimation">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2619 3.80537C18.0336 3.58547 17.9171 3.45453 17.9171 3.45453C17.9171 3.45453 17.748 3.62079 17.4237 3.89326C15.9528 5.12919 11.2905 8.55032 4.75087 8.55032C4.75087 8.55032 3.93887 18.5874 6.60064 24.3526C8.45735 28.375 12.2114 31.7844 17.5894 33.7283C22.9694 31.7864 26.7234 28.5334 28.5821 24.5111C31.2419 18.7459 30.4299 8.55032 30.4299 8.55032C23.7271 8.55032 19.4583 4.95729 18.2619 3.80537ZM17.8349 6.73532C17.2161 7.18021 16.447 7.68474 15.5408 8.188C13.4547 9.34653 10.5952 10.5236 7.14705 10.9148C7.12738 11.8221 7.12586 12.9513 7.17558 14.1892C7.30294 17.3603 7.75701 20.8932 8.87041 23.3047C10.3145 26.4331 13.2178 29.2675 17.5919 31.0515C22.0033 29.2701 24.8823 26.5577 26.3126 23.4624C27.4236 21.0535 27.878 17.4848 28.0053 14.2698C28.0557 12.9993 28.0534 11.8402 28.0329 10.913C24.6199 10.5182 21.8772 9.33216 19.897 8.14806C19.0831 7.66132 18.3942 7.17284 17.8349 6.73532Z" fill="#5C5C5C"/>
+                <path d="M18.2943 14.8817V17.4332L18.6783 17.4482C19.9562 17.5181 20.821 17.7419 21.2717 18.1173C21.7192 18.4938 21.944 19.1822 21.944 20.1826C21.944 21.2604 21.6977 22.0166 21.2104 22.4512C20.721 22.8847 19.8658 23.1009 18.646 23.1009L18.291 23.1073V24.2497H17.1304V23.1073L16.8034 23.1009C15.589 23.1009 14.7359 22.8943 14.2401 22.477C13.7485 22.0628 13.5 21.3389 13.5 20.3074L13.5075 19.9621H15.2297V20.1385C15.2297 20.7667 15.3308 21.1722 15.5319 21.3551C15.732 21.5358 16.1795 21.6283 16.8744 21.6283L17.1282 21.6347V18.8713C15.7729 18.8713 14.8467 18.6745 14.3509 18.2829C13.855 17.8914 13.6076 17.1556 13.6076 16.0789C13.6076 15.0344 13.855 14.3202 14.3541 13.9351C14.8532 13.5511 15.7772 13.3575 17.1282 13.3575V12.3668H18.29V13.3585C19.5818 13.3585 20.4639 13.5435 20.9383 13.9114C21.4126 14.2804 21.6482 14.9656 21.6482 15.967V16.2015H19.9841L19.9755 16.0176C19.9755 15.2603 19.5044 14.8828 18.5599 14.8828H18.291V14.8817H18.2943ZM17.1325 14.8752L16.8851 14.8828C15.8643 14.8828 15.3545 15.2872 15.3545 16.095C15.3545 16.9405 15.8643 17.3643 16.8787 17.3643C16.8894 17.3643 16.9733 17.3686 17.1325 17.3783V14.8752ZM18.2943 21.6358H18.5417C19.6475 21.6358 20.2003 21.1625 20.2003 20.2127C20.2003 19.6942 20.0799 19.35 19.8314 19.1854C19.5851 19.0198 19.073 18.938 18.291 18.938V21.638L18.2943 21.6358Z" fill="#5C5C5C"/>
+              </svg>
+            </div>
             <p class="promo_bottom__box-items--title">Защита</p>
             <p class="subP">Сохранение Ваших средств с привязкой к доллару</p>
           </div>
           <div class="promo_bottom__box-items">
-            <img src="static/svg/Promo/Refund.svg" alt="">
+            <div class="promo_bottom__box-items--img promoAnimation">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.8366 7.57875L25.2577 9.60705C28.661 12.2552 30.3586 16.5425 29.6886 20.7971C29.1978 23.919 27.5203 26.6629 24.9655 28.5238C22.4099 30.3838 19.2838 31.1397 16.1619 30.6464C9.7172 29.6317 5.29831 23.5631 6.31136 17.118C6.80218 13.9957 8.48019 11.2516 11.0353 9.3912C13.2661 7.76724 15.9318 6.98727 18.6502 7.14198L16.4284 9.47295L18.0767 11.0459L21.584 7.36375L21.5849 7.3651L23.1561 5.71513L21.509 4.14387L21.5082 4.14437L17.8274 0.636353L16.2549 2.28632L18.6533 4.57067C15.393 4.41647 12.1997 5.36483 9.5228 7.31392C6.41287 9.57834 4.37089 12.9181 3.77299 16.719C2.53969 24.5635 7.91776 31.951 15.7622 33.1854C16.5204 33.305 17.2783 33.3636 18.0312 33.3636C21.0528 33.3636 23.9888 32.4139 26.478 30.6011C29.5883 28.3364 31.6299 24.9966 32.2278 21.1965C33.0434 16.0191 30.9775 10.8008 26.8366 7.57875Z" fill="#5C5C5C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0723 16.91V18.2618V18.2627C21.5558 18.3781 23.4231 18.8746 23.4231 19.4685C23.4231 20.0624 21.5558 20.5589 19.0723 20.6743V25H16.8589V20.6788C14.3718 20.5625 12.5 20.066 12.5 19.4712C12.5 18.8764 14.3709 18.3799 16.8589 18.2645V16.9127H13.7976V14.8571H22.1335V16.91H19.0723ZM18.9873 20.3124C19.0302 20.3105 19.058 20.3093 19.0723 20.3093V20.3075C21.266 20.2093 22.9035 19.8227 22.9035 19.3631C22.9035 18.9035 21.266 18.5168 19.0723 18.4186V19.9245C19.0088 19.9299 18.6654 19.9587 17.983 19.9587C17.4142 19.9587 17.0028 19.9344 16.8589 19.9245V18.4186C14.6607 18.5168 13.0196 18.9026 13.0196 19.364C13.0196 19.8254 14.6607 20.2111 16.8589 20.3093C17.2304 20.326 17.6022 20.3338 17.9741 20.3327C18.5254 20.3327 18.8425 20.3188 18.9873 20.3124Z" fill="#5C5C5C"/>
+              </svg>
+            </div>
             <p class="promo_bottom__box-items--title">Возвратный депозит</p>
             <p class="subP">Возврат средств в короткие сроки</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="howItWork">
+    <section class="howItWork" id="howItWork">
       <div class="container">
         <h4>Как это работает?</h4>
         <p>Всё очень просто:</p>
         <div class="howItWork_description">
           <div class="howItWork_description__box">
-            <p>Устанавливаете приложение Amir&#160;Wallet, регистрируетесь в приложении или в личном кабинете на сайте <a href="https://account.amir.capital/" class="greenText">https://account.amir.capital/</a></p>
-            <img src="static/svg/HowItWork/Download.svg" alt="">
+            <img src="static/svg/NumInCircle/Num1.svg" alt="" class="num">
+            <p>Устанавливаете приложение Amir&#160;Wallet, регистрируетесь в приложении или в личном кабинете на сайте <a target="_blanck" href="https://account.amir.capital/" class="greenText">https://account.amir.capital/</a></p>
+            <img src="static/svg/HowItWork/Download.svg" alt="" class="icon">
           </div>
           <div class="howItWork_description__box">
+            <img src="static/svg/NumInCircle/Num2.svg" alt="" class="num">
             <p>Вместо привычной ежемесячной оплаты за мобильную связь и интернет внесите возвратный депозит на который начисляется ежемесячно 6% годовых</p>
-            <img src="static/svg/HowItWork/Refund.svg" alt="">
+            <img src="static/svg/HowItWork/Refund.svg" alt="" class="icon">
           </div>
           <div class="howItWork_description__box">
+            <img src="static/svg/NumInCircle/Num3.svg" alt="" class="num">
             <p>Получаете SIM-карту от нашего дистрибьютора в Вашем городе, активируете бесплатную подписку и подключаете связь</p>
-            <img src="static/svg/HowItWork/TakeSIM.svg" alt="">
+            <img src="static/svg/HowItWork/TakeSIM.svg" alt="" class="icon">
           </div>
           <div class="howItWork_description__box">
-            <p>Устанавливаете приложение Amir&#160;Wallet, регистрируетесь в приложении или в личном кабинете на сайте</p>
-            <img src="static/svg/HowItWork/Unlimited.svg" alt="">
+            <img src="static/svg/NumInCircle/Num4.svg" alt="" class="num">
+            <p>Пользуетесь связью и интернетом бессрочно и без оплаты, пока депозит размещен и приносит доход 6% годовых</p>
+            <img src="static/svg/HowItWork/Unlimited.svg" alt="" class="icon">
           </div>
         </div>
         <h4>Таким образом вы получаете:</h4>
         <div class="howItWork_get">
           <div class="howItWork_get__box">
-            <img src="static/svg/NumInCircle/Num1.svg" alt="">
             <p>Экономия на том, что не платите за связь</p>
           </div>
           <div class="howItWork_get__box">
-            <img src="static/svg/NumInCircle/Num2.svg" alt="">
             <p>Инвестиционный доход 6% годовых</p>
           </div>
           <div class="howItWork_get__box">
-            <img src="static/svg/NumInCircle/Num3.svg" alt="">
             <p>И защищаете свои средства от девальвации</p>
           </div>
           <div class="howItWork_get__box">
-            <img src="static/svg/NumInCircle/Num4.svg" alt="">
             <p>Возврат депозита в короткие сроки</p>
           </div>
         </div>
@@ -116,7 +131,7 @@
     </section>
     <section class="tariffs">
       <div class="container">
-        <h4>Пакеты услуг</h4>
+        <h4>Все пакеты услуг 0 рублей!</h4>
         <ul class="tariffs_box" id="tariffs_slider">
           <li class="card">
             <div class="card_head">
@@ -125,21 +140,32 @@
             </div>
             <div class="card_content">
               <div class="card_column">
-                <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">25 Gb</p>
+                <p class="card_column__top subP">Gb</p>
+                <p class="card_column__bottom">10</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">gsm</p>
-                <p class="card_column__bottom">1000</p>
+                <p class="card_column__bottom">300</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">sms</p>
-                <p class="card_column__bottom">500</p>
+                <p class="card_column__bottom">100</p>
               </div>
             </div>
             <div class="card_bottom" id="card_bottom">
-              <h5 class="price">300 USDT</h5>
-              <p class="subP cardT">Почувствуй себя настоящей звездой с пакетом услуг Star. С депозитом 300 USDT вы получите комфортную мобильную связь по России с 1000 минут GSM звонков, 500 SMS и 25 Гб скоростного интернета, а так же безлимитным интернетом LTE. При выезде зарубеж есть возможность подключить пакеты GSM минут и мегабайты интернета по самой низкой цене для страны пребывания.</p>
+              <div class="price">
+                <h5>300 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
+              </div>
+              <p class="subP cardT">Пакет подойдет для тех, кто часто находится в зоне WiFi и предпочитает общаться в мессенджерах:<br>
+                - Интернет  - 10 Gb<br>
+                - Раздача интернета до 5 устройств<br>
+                - Звонки внутри сети – безлимит<br>
+                - 300 минут на любые номера по России<br>
+                - 100 СМС<br>
+                - Начисление на возвратный депозит 6% годовых<br>
+                - Вы можете выводить полученную доходность
+              </p>
             </div>
             <img src="static/svg/Arrow.svg" alt="" class="card_button">
           </li>
@@ -150,8 +176,8 @@
             </div>
             <div class="card_content">
               <div class="card_column">
-                <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">25 Gb</p>
+                <p class="card_column__top subP">Gb</p>
+                <p class="card_column__bottom">25</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">gsm</p>
@@ -161,10 +187,22 @@
                 <p class="card_column__top subP">sms</p>
                 <p class="card_column__bottom">500</p>
               </div>
+              <p class="card_small">LTE/4G безлимит</p>
             </div>
             <div class="card_bottom" id="card_bottom">
-              <h5 class="price">340 USDT</h5>
-              <p class="subP cardT">Пакет услуг Moon является лучшим решением не для телефонов, а для умных устройств требующих использование мобильного интернета, таких как планшет, smart-часы и др. Он включает в себя безлимитный интернет на максимально возможной скорости в зоне покрытия сети “Билайн” на территории России. И это все доступно ежемесячно при размещении депозита 340 USDT.</span></p>
+              <div class="price">
+                <h5>380 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
+              </div>
+              <p class="subP cardT">Достаточно интернета и почти 17 часов мобильной связи:<br>
+                - Интернет  - 25 Gb, при этом в зоне LTE/4G безлимит<br>
+                - Раздача интернета до 5 устройств<br>
+                - Звонки внутри сети – безлимит<br>
+                - 1000 минут на любые номера по России<br>
+                - 500 СМС<br>
+                - Начисление на возвратный депозит 6% годовых<br>
+                - Вы можете выводить полученную доходность
+              </p>
             </div>
             <img src="static/svg/Arrow.svg" alt="" class="card_button">
           </li>
@@ -175,21 +213,29 @@
             </div>
             <div class="card_content">
               <div class="card_column">
-                <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">35 Gb</p>
+                <p class="card_column__top subP">Gb</p>
+                <p class="card_column__bottom">Безлимит</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">gsm</p>
-                <p class="card_column__bottom">2000</p>
+                <p class="card_column__bottom">0</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">sms</p>
-                <p class="card_column__bottom">1000</p>
+                <p class="card_column__bottom">0</p>
               </div>
             </div>
             <div class="card_bottom" id="card_bottom">
-              <h5 class="price">400 USDT</h5>
-              <p class="subP cardT">Этот пакет услуг подойдет для людей активно пользующихся мобильной связью: дома, на работе, в транспорте, на природе и т.д. С депозитом 400 USDT вы получите 35 Гб скоростного интернета + безлимитный интернет LTE, 1000 SMS и 2000 минут GSM звонков по России. При выезде зарубеж есть возможность подключить пакеты GSM минут и мегабайты интернета по самой низкой цене для страны пребывания. </p>
+              <div class="price">
+                <h5>400 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
+              </div>
+              <p class="subP cardT">Безлимитный интернет для IoT, такой пакет подойдет например для роутера, планшета или умных часов, а так же для тех, кто предпочитает общаться только в мессенджерах, соц сетях и по почте:<br>
+                - Интернет  - безлимит<br>
+                - Раздача интернета до 5 устройств<br>
+                - Начисление на возвратный депозит 6% годовых<br>
+                - Вы можете выводить полученную доходность
+              </p>
             </div>
             <img src="static/svg/Arrow.svg" alt="" class="card_button">
           </li>
@@ -200,8 +246,45 @@
             </div>
             <div class="card_content">
               <div class="card_column">
-                <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">50 Gb</p>
+                <p class="card_column__top subP">Gb</p>
+                <div class="card_column__bottom">35</div>
+              </div>
+              <div class="card_column">
+                <p class="card_column__top subP">gsm</p>
+                <p class="card_column__bottom">2000</p>
+              </div>
+              <div class="card_column">
+                <p class="card_column__top subP">sms</p>
+                <p class="card_column__bottom">1000</p>
+              </div>
+              <p class="card_small">LTE/4G безлимит</p>
+            </div>
+            <div class="card_bottom" id="card_bottom">
+              <div class="price">
+                <h5>500 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
+              </div>
+              <p class="subP cardT">Этот пакет удобен для тех кто делает довольно много звонков каждый день, и должен быть всегда на связи:<br>
+                - Интернет - 35 Gb, при этом в зоне LTE/4G безлимит<br>
+                - Раздача интернета до 5 устройств<br>
+                - 2000 минут на любые номера по России<br>
+                - Звонки внутри сети – безлимит<br>
+                - 1000 СМС<br>
+                - Начисление на возвратный депозит 6% годовых<br>
+                - Вы можете выводить полученную доходность
+              </p>
+            </div>
+            <img src="static/svg/Arrow.svg" alt="" class="card_button">
+          </li>
+          <li class="card">
+            <div class="card_head">
+              <h4>Universe</h4>
+              <img src="static/svg/Tariffs/Universe.svg" alt="TarifTravel">
+            </div>
+            <div class="card_content">
+              <div class="card_column">
+                <p class="card_column__top subP">Gb</p>
+                <div class="card_column__bottom">50</div>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">gsm</p>
@@ -209,72 +292,61 @@
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">sms</p>
-                <p class="card_column__bottom">1000</p>
+                <p class="card_column__bottom">2000</p>
               </div>
+              <p class="card_small">LTE/4G безлимит</p>
             </div>
             <div class="card_bottom" id="card_bottom">
-              <h5 class="price">600 USDT</h5>
-              <p class="subP cardT">С пакетом услуг Universe вам доступна целая вселенная. Скоростной интернет 50 Гб с безлимитным LTE, 4000 минут GSM звонков по России и 1000 SMS открываются с депозитом 600 USDT. И, конечно, при выезде заграницу доступны пакеты GSM минут и интернета по самой низкой цене региона использования. </p>
-            </div>
-            <img src="static/svg/Arrow.svg" alt="" class="card_button">
-          </li>
-          <li class="card">
-            <div class="card_head">
-              <h4>Universe</h4>
-              <img src="static/svg/Tariffs/Universe.svg" alt="TarifTravel">
-            </div>
-            <div class="card_content">
-              <div class="card_column">
-                <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">50 Gb</p>
+              <div class="price">
+                <h5>700 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
               </div>
-              <div class="card_column">
-                <p class="card_column__top subP">gsm</p>
-                <p class="card_column__bottom">/</p>
-              </div>
-              <div class="card_column">
-                <p class="card_column__top subP">sms</p>
-                <p class="card_column__bottom">/</p>
-              </div>
-            </div>
-            <div class="card_bottom" id="card_bottom">
-              <h5 class="price">500 USDT</h5>
-              <p class="subP cardT">Пакет услуг подойдет для тех кому важен безлимитный скоростной интернет по России и возможность пользоваться мобильной связью и интернетом в поездках за руб<span class="hidden">ежом. В пакет услуг так же входит 500 mb интернет трафика. Имеется возможность докупать пакеты интернет трафика и GSM звонков.</span></p>
-              <p class="soon">
-                Скоро!
+              <p class="subP cardT">Пакет удобен инвесторам, предпринимателям, где десятки звонков в день - это не предел, интернет для просмотра видео по пути в другой город России, или по дороге домой, на заднем сидении своего авто:<br>
+                - Интернет  - 50 Gb, при этом в зоне LTE/4G безлимит<br>
+                - Раздача интернета до 5 устройств<br>
+                - 4000 минут на любые номера по России<br>
+                - 2000 СМС<br>
+                - Звонки внутри сети – безлимит<br>
+                - Начисление на возвратный депозит 6% годовых<br>
+                - Вы можете выводить полученную доходность
               </p>
             </div>
             <img src="static/svg/Arrow.svg" alt="" class="card_button">
           </li>
-          <li class="card">
+          <li class="card soon">
             <div class="card_head">
-              <h4>Universe</h4>
+              <h4>Travel</h4>
               <img src="static/svg/Tariffs/Universe.svg" alt="TarifTravel">
             </div>
-            <div class="card_content">
+            <div class="soon_box">
+              <p>Пакет “Travel”</p>
+              <h5>Уже скоро!</h5>
+            </div>
+            <!-- <div class="card_content">
               <div class="card_column">
                 <p class="card_column__top subP">lte</p>
-                <p class="card_column__bottom">50 Gb</p>
+                <p class="card_column__bottom">-</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">gsm</p>
-                <p class="card_column__bottom">/</p>
+                <p class="card_column__bottom">-</p>
               </div>
               <div class="card_column">
                 <p class="card_column__top subP">sms</p>
-                <p class="card_column__bottom">/</p>
+                <p class="card_column__bottom">-</p>
               </div>
             </div>
             <div class="card_bottom" id="card_bottom">
-              <h5 class="price">500 USDT</h5>
+              <div class="price">
+                <h5>1 000 USDT</h5>
+                <p class="subP">Возвратный депозит</p>
+              </div>
               <p class="subP cardT">Пакет услуг подойдет для тех кому важен безлимитный скоростной интернет по России и возможность пользоваться мобильной связью и интернетом в поездках за руб<span class="hidden">ежом. В пакет услуг так же входит 500 mb интернет трафика. Имеется возможность докупать пакеты интернет трафика и GSM звонков.</span></p>
-              <p class="soon">
-                Скоро!
-              </p>
             </div>
-            <img src="static/svg/Arrow.svg" alt="" class="card_button">
+            <img src="static/svg/Arrow.svg" alt="" class="card_button"> -->
           </li>
         </ul>
+        <a href="/distributors" class="tariffs_link">Обратиться к дистрибьютору</a>
       </div>
     </section>
     <section class="profit">
@@ -284,19 +356,41 @@
             <div class="profit_box__items">
               <p class="profit_box__items-title">Доход на том, что раньше было ежемесячным, обязательным расходом</p>
               <p class="profit_box__items-description subP">Сейчас много говорят о том, что если хочешь стать миллионером, нужно тратить меньше и зарабатывать больше, но как это сделать в реальности? Как сократить расходы, если это затраты на ежедневные нужды?</p>
-              <span class="profit_button subP greenText">Читать дальше</span>
+              <div class="profit_box__items-description--open">
+                <p class="subP"><b>Давайте посмотрим, какие расходы у нас есть, и какие можно сократить:</b></p>
+                <ul class="subP">
+                  <li>Те, что нельзя исключить, например: оплата коммунальных услуг, аренда квартиры, проездной или бензин для машины, мобильная связь, интернет</li>
+                  <li>Нельзя исключить, но можно покупать подешевле: продукты, одежда (можно покупать более дешевые товары, но менее качественные)</li>
+                  <li>Расходы, на которых обычно  обычно экономят, но при этом они важные в Вашей жизни: желаниях, а платим за то чтобы иметь возможность существовать. развлечения, путешествия, обучение и тренинги, личные «хотелки», и т.д.</li>
+                </ul>
+                <p class="subP"><b>С AmirCell стало реальным сократить расход, который раньше нельзя было исключить – теперь мобильная связь вместо расходов может приносить доход!</b></p>
+              </div>
+              <span class="profit_button subP greenText">Читать дальше
+                <img src="static/svg/Arrow.svg" alt="">
+              </span>
               <img src="static/svg/Profit/Sales.svg" alt="">
             </div>
             <div class="profit_box__items">
               <p class="profit_box__items-title">Доходная альтернатива вкладу и другим инструментам инвестирования</p>
               <p class="profit_box__items-description subP">Пользуясь связью AmirCell, без оплаты, разместив возвратный депозит, Вы получаете 6% годовых и защищаете свои сбережения от девальвации</p>
-              <span class="profit_button subP greenText">Читать дальше</span>
+              <div class="profit_box__items-description--open">
+                <p class="subP">Сравните с обычным вкладом, где в валюте можно получит всего 0,1-1% годовых и в рублях 3-5%. Еще внедряется налог на доход с депозита, при этом платите за связь как обычно</p>
+              </div>
+              <span class="profit_button subP greenText">Читать дальше
+                <img src="static/svg/Arrow.svg" alt="">
+              </span>
               <img src="static/svg/Profit/Investment.svg" alt="">
             </div>
             <div class="profit_box__items">
               <p class="profit_box__items-title">Отсутствие роуминга по всему миру</p>
               <p class="profit_box__items-description subP">При путешествии по всему миру абоненты могут пользоваться услугами связи и интернетом по тарифам местных операторов, без роуминга</p>
-              <span class="profit_button subP greenText">Читать дальше</span>
+              <div class="profit_box__items-description--open">
+                <p class="subP">Нет необходимости искать и покупать местные SIM-карты разных стран для работы по локальным тарифам, чтобы сэкономить на связи, а так же пополнять их баланс и общаться с местной техподдержкой на иностранных языках при возникновении проблем. Одна SIM-карта (RSP SIM) работает по всему миру без роуминга, по локальным тарифам каждой страны, с русскоязычной техподдержкой</p>
+                <p class="subP">За эту услугу платить тоже не нужно, если размещен депозит, на который Вы так же получите вознаграждение 6% годовых</p>
+              </div>
+              <span class="profit_button subP greenText">Читать дальше
+                <img src="static/svg/Arrow.svg" alt="">
+              </span>
               <img src="static/svg/Profit/Roaming.svg" alt="">
             </div>
           </div>
@@ -307,10 +401,10 @@
         <div class="banner_box__item">
           <h4>Для кого подходит AmirCell?</h4>
           <p>Доходная связь AmirCell может подойти каждому, но она не для всех</p>
-          <a href="">Регистрация</a>
+          <a target="_blanck" href="https://account.amir.capital/front/auth/sign-up">Регистрация</a>
         </div>
-        <img src="./static/img/Banner№1/Abstraction.png" alt="" class="greenBanner_abstract">
-        <img src="./static/img/Banner№1/People.png" alt="" class="greenBanner_people">
+        <img src="./static/img/Banner1/Abstraction.png" alt="" class="greenBanner_abstract">
+        <img src="./static/img/Banner1/People.png" alt="" class="greenBanner_people">
       </div>
         <ul class="greenBanner_slider" id="greenBanner_slider">
           <li class="greenBanner_slider__items">
@@ -339,21 +433,21 @@
               <img src="static/svg/NumInCircle/Num1.svg" alt="" class="subscriber_box__items-num">
               <img src="static/svg/Subscriber/Download.svg" alt="">
             </div>
-            <p class="subscriber_box__items-text">Скачать Amir Wallet по ссылке дистриббютора и пройти верификацию KYC</p>
+            <p class="subscriber_box__items-text">Зарегистрироваться в личном кабинете по ссылке <a target="_blanck" href="https://account.amir.capital/front/auth/sign-in" class="greenText">account.amir.capital</a></p>
           </div>
           <div class="subscriber_box__items">
             <div class="subscriber_box__items-imgWrapp">
               <img src="static/svg/NumInCircle/Num2.svg" alt="" class="subscriber_box__items-num">
               <img src="static/svg/Subscriber/Deposit.svg" alt="">
             </div>
-            <p class="subscriber_box__items-text">Пополнить Amir Wallet на сумму выбранного тарифа</p>
+            <p class="subscriber_box__items-text">Пополнить кошелек на сумму выбранного тарифа</p>
           </div>
           <div class="subscriber_box__items">
             <div class="subscriber_box__items-imgWrapp">
               <img src="static/svg/NumInCircle/Num3.svg" alt="" class="subscriber_box__items-num">
               <img src="static/svg/Subscriber/Account.svg" alt="">
             </div>
-            <p class="subscriber_box__items-text">Активировать в личном кабинете</p>
+            <p class="subscriber_box__items-text">Активировать "Подписку" на связь и интернет без оплаты в личном кабинете</p>
           </div>
           <div class="subscriber_box__items">
             <div class="subscriber_box__items-imgWrapp">
@@ -363,16 +457,12 @@
             <p class="subscriber_box__items-text">Получить sim-карту у дистрибьютора или по почте</p>
           </div>
         </div>
-        <div class="subscriber_qr">
-          <img src="static/svg/Subscriber/qrIcon.svg" alt="">
-          <p>Сканируй QR код что бы скачать Amir Wallet</p>
-        </div>
         <div class="subscriber_contact">
           <h5>Так же вы можете:</h5>
           <div class="subscriber_contact__backCall"></div>
           <div class="subscriber_contact__list">
-            <p><span class="greenMark"></span>Обратиться к дистрибьютору в Вашем городе&#160;<a href="#" class="greenText"> Список дистрибьюторов</a></p>
-            <p><span class="greenMark"></span>Напишите в службу поддержки&#160;<a href="mailto:service@amircell" class="greenText"> service@amircell</a></p>
+            <p><span class="greenMark"></span>Обратиться к дистрибьютору в Вашем городе&#160;<a href="/distributors" class="greenText"> Список дистрибьюторов</a></p>
+            <p><span class="greenMark"></span>Напишите в службу поддержки&#160;<a target="_blanck" href="mailto:service@amircell" class="greenText"> service@amircell</a></p>
           </div>
         </div>
       </div>
@@ -380,42 +470,42 @@
     <section class="purpleBanner banner">
       <div class="banner_box">
         <div class="banner_box__item">
-          <h4>Что ещо возможно с AmirCell?</h4>
+          <h4>Что еще возможно с AmirCell?</h4>
           <p>Доходная связь AmirCell может подойти каждому, но она не для всех</p>
-          <a href="">Заказать sim-карту</a>
+          <a target="_blanck" href="https://account.amir.capital/front/auth/sign-in">Заказать sim-карту</a>
         </div>
-        <img src="./static/img/Banner№2/Abstraction.png" alt="" class="purpleBanner_abstract">
-        <img src="./static/img/Banner№2/People.png" alt="" class="purpleBanner_people">
+        <img src="./static/img/Banner2/Abstraction.png" alt="" class="purpleBanner_abstract">
+        <img src="./static/img/Banner2/People.png" alt="" class="purpleBanner_people">
       </div>
-        <div class="purpleBanner_bottom">
-          <h5>Как работает партнерская программа:</h5>
-          <div class="purpleBanner_bottom__items">
-            <div class="purpleBanner_bottom__items-img">
-              <img src="static/svg/NumInCircle/Num1P.svg" alt="">
-            </div>
-            <p class="purpleBanner_bottom__items-title">Рекрутинг</p>
-            <p class="purpleBanner_bottom__items-description">Вы приглашаете новых пользователей стать абонентом AmirCell</p>
+      <div class="purpleBanner_bottom">
+        <h5>Как работает партнерская программа:</h5>
+        <div class="purpleBanner_bottom__items">
+          <div class="purpleBanner_bottom__items-img">
+            <img src="static/svg/NumInCircle/Num1P.svg" alt="">
           </div>
-          <div class="purpleBanner_bottom__items">
-            <div class="purpleBanner_bottom__items-img">
-              <img src="static/svg/NumInCircle/Num2P.svg" alt="">
-            </div>
-            <p class="purpleBanner_bottom__items-title">Возвратный депозит</p>
-            <p class="purpleBanner_bottom__items-description">Пользователь размещает возвратный депозит и активирует sim-карту по выбранному тарифу</p>
-          </div>
-          <div class="purpleBanner_bottom__items">
-            <div class="purpleBanner_bottom__items-img">
-              <img src="static/svg/NumInCircle/Num3P.svg" alt="">
-            </div>
-            <p class="purpleBanner_bottom__items-title">Ежемесячный доход</p>
-            <p class="purpleBanner_bottom__items-description">Пока приглашенный абонент использует связь, Вам ежемесячно начисляется доход в размере 0,12% до 0,63% в месяц от суммы депозитов тех, кого вы пригласили</p>
-          </div>
+          <p class="purpleBanner_bottom__items-title">Рекрутинг</p>
+          <p class="purpleBanner_bottom__items-description">Вы приглашаете новых пользователей стать абонентом AmirCell</p>
         </div>
+        <div class="purpleBanner_bottom__items">
+          <div class="purpleBanner_bottom__items-img">
+            <img src="static/svg/NumInCircle/Num2P.svg" alt="">
+          </div>
+          <p class="purpleBanner_bottom__items-title">Возвратный депозит</p>
+          <p class="purpleBanner_bottom__items-description">Пользователь размещает возвратный депозит и активирует sim-карту по выбранному тарифу</p>
+        </div>
+        <div class="purpleBanner_bottom__items">
+          <div class="purpleBanner_bottom__items-img">
+            <img src="static/svg/NumInCircle/Num3P.svg" alt="">
+          </div>
+          <p class="purpleBanner_bottom__items-title">Ежемесячный доход</p>
+          <p class="purpleBanner_bottom__items-description">Пока приглашенный абонент использует связь, Вам ежемесячно начисляется доход в размере 0,12% до 0,63% в месяц от суммы депозитов тех, кого вы пригласили</p>
+        </div>
+      </div>
     </section>
     <section class="busines">
       <div class="container">
         <h4>Что необходимо, чтобы построить свой Бизнес с AmirCell</h4>
-        <p>Быть абонентом Amir Cell по подписке и придерживаться классической стратегии в сфере продаж - 10-7-4-2 для построение своей абонентской базы</p>
+        <p>Быть абонентом AmirCell по подписке и придерживаться классической стратегии в сфере продаж&#160;- 10-7-4-2 для построение своей абонентской базы</p>
         <div class="busines_box">
           <div class="busines_box__items">
             <h4>10</h4>
@@ -437,55 +527,57 @@
       </div>
     </section>
     <section class="steps">
-      <div class="container">
-        <h4>Какой результат вы можете получить?</h4>
+      <h4>Какой результат вы можете получить?</h4>
+      <div class="table_wrap">
         <div class="steps_table">
             <p></p>
             <p>1 мес</p>
             <p>2 мес</p>
             <p>3 мес</p>
             <p>...</p>
-            <p class="table_color">6 мес</p>
-            <p class="table_color">% доходность</p>
-            <p class="table_color">Доход</p>
+            <p class="table_color purpleText">6 мес</p>
+            <p class="table_color purpleText">Доходность</p>
+            <p class="table_color purpleText">Доход</p>
             <p class="steps_table_bg tabl_left">1 линия</p>
-            <p class="steps_table_bg"><b>50</b></p>
-            <p class="steps_table_bg"><b>100</b></p>
-            <p class="steps_table_bg"><b>150</b></p>
+            <p class="steps_table_bg"><b>50</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
+            <p class="steps_table_bg"><b>100</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
+            <p class="steps_table_bg"><b>150</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
             <p class="steps_table_bg"><b>...</b></p>
-            <p class="steps_table_bg table_color"><b>300</b></p>
-            <p class="steps_table_bg table_color"><b>15</b></p>
-            <p class="steps_table_bg tabl_right table_color"><b>382</b></p>
+            <p class="steps_table_bg table_color"><b>300</b><img src="static/svg/PeopleIcon2.svg" alt=""></p>
+            <p class="steps_table_bg table_color"><b>15%</b></p>
+            <p class="steps_table_bg tabl_right table_color"><b>382 USDT</b></p>
             <p class="steps_table_bg tabl_left">2 линия</p>
             <p class="steps_table_bg"></p>
-            <p class="steps_table_bg"><b>250</b></p>
-            <p class="steps_table_bg"><b>750</b></p>
+            <p class="steps_table_bg"><b>250</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
+            <p class="steps_table_bg"><b>750</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
             <p class="steps_table_bg"><b>...</b></p>
-            <p class="steps_table_bg table_color"><b>3 750</b></p>
-            <p class="steps_table_bg table_color"><b>6</b></p>
-            <p class="steps_table_bg tabl_right table_color"><b>1 913</b></p>
+            <p class="steps_table_bg table_color"><b>3 750</b><img src="static/svg/PeopleIcon2.svg" alt=""></p>
+            <p class="steps_table_bg table_color"><b>6%</b></p>
+            <p class="steps_table_bg tabl_right table_color"><b>1 913 USDT</b></p>
             <p class="steps_table_bg tabl_left">3 линия</p>
             <p class="steps_table_bg"></p>
             <p class="steps_table_bg"></p>
-            <p class="steps_table_bg"><b>1 250</b></p>
+            <p class="steps_table_bg"><b>1 250</b><img src="static/svg/PeopleIcon.svg" alt=""></p>
             <p class="steps_table_bg"><b>...</b></p>
-            <p class="steps_table_bg table_color"><b>25 000</b></p>
-            <p class="steps_table_bg table_color"><b>3</b></p>
-            <p class="steps_table_bg tabl_right table_color"><b>6 375</b></p>
+            <p class="steps_table_bg table_color"><b>25 000</b><img src="static/svg/PeopleIcon2.svg" alt=""></p>
+            <p class="steps_table_bg table_color"><b>3%</b></p>
+            <p class="steps_table_bg tabl_right table_color"><b>6 375 USDT</b></p>
         </div>
+      </div>
+      <div class="container">
         <div class="steps_total">
           <div class="steps_total__left">
-            <p class="steps_total__left-title">Дополнительный доход от Amir Cell через пол года может составить до 8670$ в месяц</p>
+            <p class="steps_total__left-title">Дополнительный доход от AmirCell через пол года может составить до 8670$ в месяц</p>
             <p class="steps_total__left-description">Из расчета если Вы привлекаете по 50 активных абонентов в месяц и хотя бы каждый 10-й станет таким же активным партнером как и Вы</p>
           </div>
           <div class="steps_total__right">
             <div class="steps_total__right-img">
               <img src="static/svg/Sum.svg" alt="">
             </div>
+            <h5>Итого:</h5>
             <div class="steps_total__box">
-                <h5>Итого:</h5>
-                <p class="subP">8 670 USDT/мес.<br>+ 980 Sollar</p>
-              </div>
+              <p>8 670 USDT/мес.<br>+ 980 Sollar</p>
+            </div>
           </div>
       </div>
     </section>
@@ -500,7 +592,7 @@
               <li>Заказать первую партию sim-карт от&#160;10&#160;штук</li>
               <li>Приглашать новых абонентов</li>
             </ul>
-            <a href="#">Найти партнера в своем городе</a>
+            <a href="/distributors">Найти партнера в своем городе</a>
           </div>
           <div class="partner_box__right">
             <img src="static/img/Partner/People.png" alt="">
@@ -515,37 +607,41 @@
             <img src="static/svg/Contact/Voice.svg" alt="">
             <p>Обратиться к дистрибьютеру<br>в Вашем регионе</p>
             <div class="contact_box__items-link">
-              <a href="#">Список регионов</a>
+              <a href="/distributors" class="contact_soc-arrow">Список регионов</a>
             </div>
           </div>
           <div class="contact_box__items">
             <img src="static/svg/Contact/Email.svg" alt="">
             <p>Вы можете<br>написать нам</p>
             <div class="contact_box__items-link">
-              <a href="#">support@amircell.com</a>
+              <a target="_blanck" href="mailto:support@amircell.com">support@amircell.com</a>
             </div>
           </div>
           <div class="contact_box__items">
             <img src="static/svg/Contact/Headphones.svg" alt="">
-            <p>Позвонить по номеру:</p>
+            <p>Заказать<br>обратный звонок</p>
             <div class="contact_box__items-link">
-              <a href="#">+7888 88888</a>
+              <a class="contact_soc-arrow" onclick="
+					      $('.lt-label').trigger('click')
+					      document.querySelector('.lt-widget-mobile-wrap').classList.remove('lt-widget-hidden');
+					      $('.lt-offline').css('display','block');
+				      ">Заказать</a>
             </div>
           </div>
           <div class="contact_box__items">
             <img src="static/svg/Contact/Download.svg" alt="">
-            <p>Самостоятельно<br>установить Amir Wallet</p>
+            <p>Зарегистрироваться в<br>личном кабинете</p>
             <div class="contact_box__items-link">
-              <a href="#">Play Market</a>
-              <a href="#">App Store</a>
+              <a target="_blanck" href="https://account.amir.capital/front/auth/sign-up" class="contact_soc-arrow">account.amir.capital</a>
             </div>
           </div>
           <div class="contact_box__items">
             <img src="static/svg/Contact/Soc.svg" alt="">
             <p>Мы с соц. Сетях</p>
             <div class="contact_box__items-link">
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
+              <a target="_blanck" href="https://www.facebook.com/AmirCelltelecom/" class="contact_soc-arrow">Facebook</a>
+              <a target="_blanck" href="https://vk.com/public200554439" class="contact_soc-arrow">VK</a>
+              <a target="_blanck" href="https://instagram.com/amircell_official?igshid=xmtvnvy6jedu" class="contact_soc-arrow">Instagram</a>
             </div>
           </div>
           <div class="contact_box__items">
@@ -555,29 +651,51 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
-        <a href="/">
+        <a target="_blanck" href="/">
           <img src="static/svg/LogoFooter.svg" alt="">
         </a>
         <div class="footer_right">
-          <a href="" class="footer_right-line">
+          <a target="_blanck" href="mailto:support@amircell.com" class="footer_right-line">
             <h5>support@amircell.com</h5>
           </a>
-          <a href="" class="footer_right-line">
+          <a target="_blanck" href="" class="footer_right-line">
             <h5> +7888 88888</h5>
           </a>
-          <a href="" class="footer_right-soc">
-            <img src="static/svg/Soc/Facebook.svg" alt="">
-          </a>
-          <a href="">
-            <img src="static/svg/Soc/Instagram.svg" alt="">
-          </a>
+          <div class="footer_soc">
+            <a target="_blanck" href="" class="footer_right-soc">
+              <img src="static/svg/Soc/Facebook.svg" alt="">
+            </a>
+            <a target="_blanck" href="" class="footer_right-soc">
+              <img src="static/svg/Soc/Instagram.svg" alt="">
+            </a>
+            <a target="_blanck" href="">
+              <img src="static/svg/Soc/VK.svg" alt="">
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
   <script src="static/js/libs.min.js"></script>
+  <script src="static/js/slider.js"></script>
   <script src="static/js/main.js"></script>
+  <!-- {literal} -->
+    <script type='text/javascript'>
+      window['li'+'veT'+'ex'] = true,
+      window['li'+'veTe'+'xID'] = 168660,
+      window['live'+'Tex_ob'+'j'+'ect'] = true;
+      (function() {
+        var t = document['c'+'reate'+'Ele'+'ment']('script');
+        t.type ='text/javascript';
+        t.async = true;
+        t.src = '//c'+'s15.'+'l'+'iv'+'ete'+'x.r'+'u/js/'+'cl'+'ient.j'+'s';
+        var c = document['g'+'etEl'+'e'+'me'+'ntsByTag'+'Name']('script')[0];
+        if ( c ) c['paren'+'tNo'+'de']['i'+'n'+'ser'+'tBefor'+'e'](t, c);
+        else document['documen'+'tElem'+'ent']['fir'+'stC'+'h'+'i'+'ld']['a'+'ppe'+'ndC'+'hil'+'d'](t);
+      })();
+    </script>
+  <!-- {/literal} -->
 </body>
 </html>
